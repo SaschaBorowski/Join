@@ -15,4 +15,5 @@ nav a {
     width: 200px;
     position: sticky;
     top: 0;
+    flex-direction: column;
 }
