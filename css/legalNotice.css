@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 1014px;
+    margin-left: 328px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.HeadlineAndArrowLeft {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 206px;
+}
+
+.HeadlineAndArrowLeft h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 61px;
+}
+
+.HeadlineAndArrowLeft img {
+    width: 37px;
+    height: 37px;
+
+}
+
+.HeadlineAndArrowLeft img:hover {
+    cursor: pointer;
+}
+
+.legalNoticeTextContainer {
+    margin-top: 30px;
+}
+
+.legalNoticeImprintContainer h2 {
+    font-family: Inter;
+    font-size: 27px;
+    font-weight: 700;
+}
