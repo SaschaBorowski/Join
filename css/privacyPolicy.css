@@ -2,13 +2,26 @@
     margin: 0;
 }
 
-.blueText {
-    color: #5CBEE7;
-    text-decoration: none;
+h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 59px;
+}
+
+h2 {
+    font-family: Inter;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 16px 0 16px 0;
 }
 
 h3 {
-    margin-top: 16px;
+    margin: 16px 0 16px 0;
+}
+
+a {
+    color: #5CBEE7;
+    text-decoration: none;
 }
 
 body {
@@ -29,12 +42,6 @@ body {
     margin-bottom: 24px;
 }
 
-.HeadlineAndArrowLeft h1 {
-    font-family: Inter;
-    font-weight: 700;
-    font-size: 61px;
-}
-
 .HeadlineAndArrowLeft img {
     width: 32px;
     height: 32px;
@@ -45,19 +52,4 @@ body {
     background-color: #f1f1f1;
     scale: 1.1;
     cursor: pointer;
-}
-
-
-.legalNoticeTextContainer {
-    margin-top: 30px;
-}
-
-.legalNoticeImprintContainer {
-    margin-bottom: 16px;
-}
-
-.legalNoticeImprintContainer h2 {
-    font-family: Inter;
-    font-size: 27px;
-    font-weight: 700;
 }
