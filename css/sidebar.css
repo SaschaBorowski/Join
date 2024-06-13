@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2a3647;
+}
+
+.sidebar-container {
+    display: flex;
+    width: 200px;
+    position: sticky;
+    top: 0;
+}
