@@ -2,12 +2,22 @@
     margin: 0;
 }
 
+.blueText {
+    color: #5CBEE7;
+    text-decoration: none;
+}
+
+h3 {
+    margin-top: 16px;
+}
+
 body {
     width: 1014px;
     margin-left: 328px;
     font-family: Inter;
     font-weight: 400;
     font-size: 16px;
+    background-color: #F6F7F8;
 }
 
 .HeadlineAndArrowLeft {
@@ -16,6 +26,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 206px;
+    margin-bottom: 24px;
 }
 
 .HeadlineAndArrowLeft h1 {
@@ -25,9 +36,14 @@ body {
 }
 
 .HeadlineAndArrowLeft img {
-    width: 37px;
-    height: 37px;
+    width: 32px;
+    height: 32px;
+}
 
+.HeadlineAndArrowLeft img:hover {
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    scale: 1.1;
 }
 
 .HeadlineAndArrowLeft img:hover {
@@ -36,6 +52,10 @@ body {
 
 .legalNoticeTextContainer {
     margin-top: 30px;
+}
+
+.legalNoticeImprintContainer {
+    margin-bottom: 16px;
 }
 
 .legalNoticeImprintContainer h2 {
