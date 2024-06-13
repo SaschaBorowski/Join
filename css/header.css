@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+}
+
+header {
+    height: 96px;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header h3 {
+    margin-left: 348px;
+}
+
+.headerHelpAndLogoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.headerHelpAndLogoContainer img {
+    width: 20px;
+    margin-right: 32px;
+}
+
+.headerHelpAndLogoContainer img:hover {
+    cursor: pointer;
+}
+
+.headerHelpAndLogoContainer p {
+    border-radius: 50%;
+    border: 2px solid #2A3647;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    color: #29ABE2;
+}
+
+.headerHelpAndLogoContainer p:hover {
+    cursor: pointer;
+}
