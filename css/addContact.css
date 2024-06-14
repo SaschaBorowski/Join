@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: Inter;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 61px;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 27px;
+    margin: 0;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card-placement {
+    height: 100vh;
+}
+
+.contact-card {
+    width: 1212px;
+    height: 592px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /*top: -2901px;*/
+    /*This need to be changed with a JS function*/
+    left: 42px;
+}
+
+.text-logo-area {
+    width: 467px;
+    height: 594px;
+    border-radius: 30px 0 0 30px;
+    background-color: #2A3647;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo {
+    width: 55.6px;
+    height: 66.48px;
+}
+
+.logo-div {
+    width: 371px;
+}
+
+.slogan-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    height: 129px;
+    gap: 12px;
+}
+
+.vector {
+    width: 90px;
+    border: 3px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 48px;
+    left: 1132px;
+    border-radius: 56px;
+    width: 32px;
+    height: 32px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 204px;
+    left: 550px;
+    border-radius: 70px;
+    border: 3px;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.white-profile {
+    width: 64px;
+    height: 64px;
+}
+
+.contact-input-field {
+    width: 422px;
+    height: 215px;
+    position: absolute;
+    top: 137px;
+    left: 742px;
+    gap: 32px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-input {
+    width: 422px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input {
+    width: 380px;
+    height: 24px;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    padding: 13px 21px;
+}
+
+.font-fourhundrdred-twentyfour{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.input:focus {
+    border: 1px solid #9694f0;
+    outline: none;
+}
+
+.background-name {
+    background: url(/img/addContact-profile-gray.png) no-repeat scroll;
+    background-position: 95%;
+    background-size: 24px 24px;
+}
+
+.background-email {
+    background: url(/img/addContact-email.png) no-repeat scroll;
+    background-position: 95%;
+    background-size: 24px 24px;
+}
+
+.background-phone {
+    background: url(/img/addContact-phone.png) no-repeat scroll;
+    background-position: 95%;
+    background-size: 24px 24px;
+}
+
+.buttons-area {
+    width: 364px;
+    height: 57px;
+    position: absolute;
+    top: 400px;
+    left: 742px;
+    gap: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel-btn{
+    width: 126px;
+    height: 56px;
+    border-radius: 10px;
+    border: 1px solid #2A3647;
+    color: #2A3647;
+    background-color: white;
+    gap: 4px;
+    padding: 16px;
+    transition: 100ms ease-in-out;
+}
+
+.cancel-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 1px solid #9694f0;
+    color: #9694f0;
+}
+
+.cross-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.create-contact-btn{
+    width: 241px;
+    height: 57px;
+    border-radius: 10px;
+    padding: 16px;
+    gap: 4px;
+    background-color: #2A3647;
+    border: none;
+    color: white;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25.2px;
+    transition: 100ms ease-in-out;
+}
+
+.check{
+    width: 24px;
+    height: 24px;
+}
+
+.check-img {
+    width: 15.49px;
+    height: 11.22px;
+}
+
+.create-contact-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #9694f0;
+}
