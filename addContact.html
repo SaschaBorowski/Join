@@ -24,8 +24,9 @@
                 </div>
             </section>
 
-                <div class="close-btn">
-                    <img src="/img/Close.png">
+                <div class="close-btn" tabindex="1">
+                    <img class="close-btn-dark" src="/img/Close.png">
+                    <img class="close-btn-light" src="/img/Close-white.png">
                 </div>
 
                 <div class="profile-img flex-center">
@@ -33,19 +34,22 @@
                 </div>
 
                 <div class="contact-input-field">
-                    <div class="contact-input">
-                        <input type="text" class="input font-fourhundrdred-twentyfour background-name" placeholder="Name" required></input>
+                    <div class="contact-input ">
+                        <input type="text" class="input font-fourhundrdred-twentyfour" placeholder="Name" required></input>
+                        <img class="input-img" src="/img/addContact-profile-gray.png">
                     </div>
                     <div class="contact-input">
-                        <input type="email" class="input font-fourhundrdred-twentyfour background-email" placeholder="Email" required></input>
+                        <input type="email" class="input font-fourhundrdred-twentyfour" placeholder="Email" required></input>
+                        <img class="input-img" src="/img/addContact-email.png">
                     </div>
                     <div class="contact-input">
-                        <input type="tel" class="input font-fourhundrdred-twentyfour background-phone" placeholder="Phone" required></input>
+                        <input type="number" class="input font-fourhundrdred-twentyfour" placeholder="Phone" required></input>
+                        <img class="input-img" src="/img/addContact-phone.png">
                     </div>
                 </div>
                 <div class="buttons-area">
                     <button class="cancel-btn font-fourhundrdred-twentyfour flex-center">Cancel <span class="cross-icon">&#10006;</span></button>
-                    <button class="create-contact-btn">Create contact <span class="check"><img class="check-img" src="/img/check.png"></span></button>
+                    <button class="create-contact-btn flex-center">Create contact <span class="check"><img class="check-img" src="/img/check.png"></span></button>
                 </div>
         </form>
     </div>
