@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+}
+
+.marginRight {
+    margin-right: 24px;
+}
+
+body {
+    margin-left: 328px;
+    background-color: #F6F7F8;
+}
+
+h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 61px;
+}
+
+.headlineInputButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 206px;
+    margin-right: 150px;
+}
+
+.inputButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #2a3647;
+    color: white;
+    padding: 8px 16px 8px 16px;
+    border-radius: 10px;
+    border: none;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.btn:hover {
+    background-color: rgb(64, 171, 226);
+    cursor: pointer;
+}
+
+.btn img {
+    margin-left: 8px;
+}
+
+input {
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+input[type=text]:focus {
+    border: 1px solid #94D5F0;
+    outline: none;
+}
+
+.backgroundSearch {
+    background: url(/img/board/search.png)no-repeat scroll;
+    background-position: 95%;
+    background-size: 16px 16px;
+    padding-inline: 16px;
+
+}
+
+.font-fourhundrdred-twentyfour {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.progressBar {
+    width: 100%;
+    display: flex;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    color: #42526E;
+    margin-top: 40px;
+}
+
+.backgroundImage {
+    background: url(/img/board/plus_button.png) no-repeat scroll;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    padding-right: 8px;
+}
+
+.backgroundImage:hover {
+    background: url(/img/board/plus_button_blue.svg) no-repeat scroll;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.column1Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progressbarColumnHeadline {
+    width: 252px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskColumn {
+    width: 252px;
+    background-color: white;
+    border-radius: 16px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    box-shadow: 0px 0px 5px 0px #00000011;
+}
+
+.taskColumnContainer {
+    width: 220px;
+}
+
+.taskType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 113px;
+    height: 27px;
+    padding: 0 8px 0 8px;
+    background-color: #0038FF;
+    border-radius: 8px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.taskTitel {
+    margin-top: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    color: #2A3647;
+    line-height: 19.2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 38.4px;
+}
+
+.taskDescription {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: #A8A8A8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 38.4px;
+    line-height: 19.2px;
+    margin-top: 8px;
+}
+
+.taskSubtaskBarContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.taskSubtaskBar {
+    background-color: #F4F4F4;
+    width: 60%;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.taskSubtaskBarFilledBar {
+    background-color: green;
+    /* Need to be changed by Javascript */
+    width: 50%;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.taskSubtaskBarContainer span {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+}
+
+.taskContactsPrioContainer {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskContactsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.taskContact {
+    height: 32px;
+    width: 32px;
+    /* Color changed by Contact Type */
+    background-color: green;
+    border-radius: 50%;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: -8px;
+    /*Border entfernen sobald die Farben von den Kontakten mit Javascript gerendert werden*/
+    border: 1px solid black;
+}
