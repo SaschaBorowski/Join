@@ -196,8 +196,8 @@ h2 {
 .cancel-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
-    border: 1px solid #9694f0;
-    color: #9694f0;
+    border: 1px solid #29abe2;
+    color: #29abe2;
 }
 
 .cross-icon {
@@ -234,7 +234,7 @@ h2 {
 .create-contact-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
-    background-color: #9694f0;
+    background-color: #29abe2;
 }
 
 
@@ -283,7 +283,7 @@ h2 {
     }
 
     .close-btn:active {
-        background-color: #9694f0;
+        background-color: #29abe2;
     }
 
     .close-btn-dark {
