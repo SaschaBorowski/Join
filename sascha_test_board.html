@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board</title>
+    <title>Testing Sidebar and Header import</title>
     <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
-    <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <script src="./JS/sascha_test.js"></script>
 </head>
-
-<body>
+<body onload="includeHTML()">
+    <div w3-include-html="test.html"></div>
+    
     <div class="headlineInputButtonContainer">
         <h1>Board</h1>
         <div class="inputButtonContainer">
@@ -95,5 +96,4 @@
         </div>
     </div>
 </body>
-
 </html>
