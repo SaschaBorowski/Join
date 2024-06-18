@@ -55,25 +55,58 @@ h1 {
 
 input {
     height: 48px;
-    border-radius: 10px;
-    border: 1px solid #D1D1D1;
+    border: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     font-family: Inter;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    padding-inline: 16px;
 }
 
 input[type=text]:focus {
-    border: 1px solid #94D5F0;
     outline: none;
 }
 
-.backgroundSearch {
-    background: url(/img/board/search.png)no-repeat scroll;
-    background-position: 95%;
-    background-size: 16px 16px;
-    padding-inline: 16px;
+.inputContainer {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #D3D3D3;
+}
 
+.inputLineContainer {
+    background-color: white;
+    height: 50px;
+    display:flex;
+    align-items: center;
+}
+
+.inputContainer:focus-within {
+    border: 1px solid #94D5F0;
+    border-radius: 10px;
+}
+
+.inputLine {
+    height: 32px;
+    width: 1px;
+    background-color: #D1D1D1;
+}
+
+.inputSearchImageContainer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.inputSearchImageContainer img {
+    cursor: pointer;
 }
 
 .font-fourhundrdred-twentyfour {
