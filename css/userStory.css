@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+}
+
+.userStoryContainer {
+    width: 525px;
+    height: 931px;
+    background-color: aliceblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userStoryContainerInside {
+    width: 477px;
+    height: 867px;
+    background-color: antiquewhite;
+}
+
+.userStoryHeadlineAndCloseButtonContainer {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cornflowerblue;
+    
+}
+
+.userStoryCloseButtonContainer {
+    display:flex;
+    align-items: center;
+}
+
+.userStoryCloseButtonContainer img {
+    background-color: coral;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.userStoryCloseButtonContainer img:hover {
+    background-color: #EEEEEE;
+    cursor:pointer;
+}
+
+.taskType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 113px;
+    height: 28px;
+    padding: 0 8px 0 8px;
+    background-color: #0038FF;
+    border-radius: 8px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color:white;
+}
+
+h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 61px;
+    margin-top: 16px;
+    background-color: chartreuse;
+}
+
+.taskDescription {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 16px;
+}
+
+.dueDateDateContainer {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    display:flex;
+    margin-top: 16px;
+}
+
+.dueDate {
+    color: #2A3647;
+    width: 30%;
+}
+
+.userStoryDateContainer {
+    color:#000000;
+}
+
+.priorityContainer {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.priorityImageContainer {
+    display:flex;
+    align-items:center;
+    color:#000000;
+}
+
+.priorityImageContainer img {
+    margin-left: 8px;
+}
+
+.priority {
+    color: #2A3647;
+    width: 30%;
+}
+
+.assignedToContainer {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    color: #2A3647;
+    margin-top: 16px;
+}
