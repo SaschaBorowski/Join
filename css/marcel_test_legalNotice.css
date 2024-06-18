@@ -15,16 +15,16 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9; /* Sicherstellen, dass der Header oben bleibt */
+    z-index: 9; 
 }
 
 .HeadlineAndArrowLeft {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px; /* Abstand von der Sidebar und Header */
-    margin-left: 232px; /* Platz für die Sidebar */
-    margin-top: 96px; /* Platz für den Header */
+    padding: 24px 40px; 
+    margin-left: 232px; 
+    margin-top: 96px; 
 }
 
 .HeadlineAndArrowLeft h1 {
@@ -47,9 +47,9 @@ header {
 .legalNoticeTextContainer,
 .legalNoticeImprintContainer {
     margin-top: 30px;
-    margin-left: 232px; /* Platz für die Sidebar */
+    margin-left: 232px; 
     padding: 0 40px;
-    padding-top: 96px; /* Platz für den fixierten Header */
+    padding-top: 96px; 
 }
 
 .legalNoticeImprintContainer h2 {
