@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F7F8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9; /* Sicherstellen, dass der Header oben bleibt */
+}
+
+.HeadlineAndArrowLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px; /* Abstand von der Sidebar und Header */
+    margin-left: 232px; /* Platz für die Sidebar */
+    margin-top: 96px; /* Platz für den Header */
+}
+
+.HeadlineAndArrowLeft h1 {
+    font-weight: 700;
+    font-size: 61px;
+}
+
+.HeadlineAndArrowLeft img {
+    width: 32px;
+    height: 32px;
+}
+
+.HeadlineAndArrowLeft img:hover {
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.legalNoticeTextContainer,
+.legalNoticeImprintContainer {
+    margin-top: 30px;
+    margin-left: 232px; /* Platz für die Sidebar */
+    padding: 0 40px;
+    padding-top: 96px; /* Platz für den fixierten Header */
+}
+
+.legalNoticeImprintContainer h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.blueText {
+    color: #5CBEE7;
+    text-decoration: none;
+}
+
+h3 {
+    margin-top: 16px;
+}
+
