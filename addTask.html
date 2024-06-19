@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/addTask.css">
+    <link rel="stylesheet" href="/css/addTaskMobile.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <script src="/JS/includehtml.js"></script>
 </head>
 
 <body>
-    <div class="add-task-main-position">
-        <form class="add-task-card">
+    <div class="add-task-main-position"> <!--Change to add-task-main-position-->
+        <form class="add-task-card"> <!--Remove background color-->
             <div class="title-positioning">
                 <h1>Add Task</h1>
             </div>
-            <div class="close-btn small-icon-div">
+            <div class="close-btn small-icon-div hide"> <!--Must give the hide tag in foul screen-->
                 <img class="small-icon" src="/img/Close.png">
             </div>
-            <div class="three-input-container flex-column"> 
+            <div class="three-input-container flex-column">
                 <div class="input-title-container flex-column">
-                        <span class="medium-font medium-font-color">Title<span class="asterisc-color">*</span></span>
+                    <span class="medium-font medium-font-color">Title<span class="asterisc-color">*</span></span>
                     <div class="flex-column gap-four">
                         <input type="text" required class="simple-input medium-font" placeholder="Enter a title">
                         <span class="small-font asterisc-color hide">This field is required</span>
@@ -36,7 +38,7 @@
                     <div class="foul-input">
                         <input type="text" class="half-input medium-font" placeholder="Select contacts to assign">
                         <div class="rotating">
-                            <img class="rotating-img" src="/img/drop-down-arrow.png">
+                            <img class="rotating-img " src="/img/drop-down-arrow.png">
                         </div>
                     </div>
                     <div><!--Here must be the dropdown site implemented with js--></div>
@@ -46,7 +48,7 @@
             <div class="three-input-prio-container flex-column">
                 <div class="date-input-container flex-column">
                     <span class="medium-font medium-font-color">Due date<span class="asterisc-color">*</span></span>
-                    <div class="flex-column gap-four">
+                    <div class="flex-column  gap-four">
                         <input type="date" required class="simple-input medium-font">
                         <span class="small-font asterisc-color hide">This field is required</span>
                         <!--Must be changed with hide or show css class-->
@@ -54,7 +56,7 @@
                 </div>
                 <div class="prio-container flex-column">
                     <span class="medium-font medium-font-color">Prio</span>
-                    <div class="prio-btn-position">      <!--Images andbg-color must be changed with javascript-->
+                    <div class="prio-btn-position"> <!--Images andbg-color must be changed with javascript-->
                         <div class="prio-btn medium-font">Urgent <img src="/img/urgent-prio-icon-inactive.png"></div>
                         <div class="prio-btn medium-font">Medium <img src="/img/medium-prio-icon-inactive.png"></div>
                         <div class="prio-btn medium-font">Low <img src="/img/low-prio-icon-inactive.png"></div>
@@ -75,7 +77,8 @@
                         <div class="add-new-subtask small-icon-div">
                             <img class="smaller-icon" src="/img/add-plus-icon.png">
                         </div>
-                        <div class="close-approve-container">          <!--Must change display none to flex when new item added-->
+                        <div class="close-approve-container">
+                            <!--Must change display none to flex when new item added-->
                             <div class="small-icon-div"><img class="small-icon" src="/img/Close.png"></div>
                             <span class="small-input-vertical-vector"></span>
                             <div class="small-icon-div"><img class="smaller-icon" src="/img/check_dark_icon.svg"></div>
@@ -83,15 +86,21 @@
                     </div>
                 </div>
             </div>
-            <div class="two-buttons-position flex-row">
-                <button class="cancel-btn flex-row gap-four btn-styling medium-font">Cancel<img src="/img/Close.png"></button>
-                <button class="create-btn flex-row gap-four btn-styling medium-font">Create Task<img src="/img/check.png"></button>
-            </div>
-            <div class="bottom-required">
-                <span class="required-text"><span class="asterisc-color">*</span>This field is required</span>
+            <div class="btn-required-text flex-row">
+                <div class="bottom-required">
+                    <span class="required-text"><span class="asterisc-color">*</span>This field is required</span>
+                </div>
+                <div class="two-buttons-position flex-row">
+                    <button class="cancel-btn flex-row gap-four btn-styling medium-font">Cancel<img
+                            src="/img/Close.png"></button>
+                    <button class="create-btn flex-row gap-four btn-styling medium-font">Create Task<img
+                            src="/img/check.png"></button>
+                </div>
             </div>
         </form>
+        <div class="added-confirmation hide"> <!--Popup that confirms the new addition remove hiden add flex-row-->
+            <span class="medium-font">Task added to board</span>
+            <img class="confirmation-img" src="/img/add-confiramtion-icon.png">
+        </div>
     </div>
 </body>
-
-</html>

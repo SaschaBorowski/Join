@@ -1,0 +1,276 @@
+@media(max-width:1200px) {
+    .add-task-main-position {
+        position: inherit;
+        width: 428px;
+        height: 1150px;
+        border-radius: 0;
+    }
+
+    .add-task-card {
+        width: 428px;
+        height: 1150px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .title-positioning {
+        width: 396px;
+        padding: 16px;
+        height: 112px;
+        position: initial;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    h1 {
+        font-size: 47px;
+        line-height: 56.4px;
+    }
+
+    .medium-font {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .three-input-container {
+        position: initial;
+        width: 396px;
+        gap: 8px;
+    }
+
+    .input-title-container {
+        width: 396px;
+        height: 83px;
+    }
+
+    .simple-input {
+        width: 354px;
+        height: 20px;
+        padding: 10px 21px;
+    }
+
+    .description-container {
+        width: 396px;
+        height: 131px;
+    }
+
+    .textarea {
+        max-width: 396px;
+        width: 354px;
+        height: 52px;
+        padding: 18px 21px;
+    }
+
+    .assigned-container {
+        width: 396px;
+        height: 75px;
+    }
+
+    .foul-input {
+        width: 396px;
+        height: 48px;
+    }
+
+    .half-input {
+        width: 340px;
+        height: 16px;
+    }
+
+    .date-input-container {
+        width: 396px;
+        height: 83px;
+    }
+
+    .prio-container {
+        width: 396px;
+        height: 88px;
+    }
+
+    .prio-btn-container {
+        width: 396px;
+        height: 61px;
+    }
+
+    .prio-btn-position {
+        width: 396px;
+        height: 61px;
+    }
+
+    .prio-btn {
+        width: 121.33px;
+        height: 41px;
+    }
+
+    .selection {
+        width: 396px;
+    }
+
+    .vertical-vector {
+        display: none;
+    }
+
+    .three-input-prio-container {
+        position: initial;
+    }
+
+    .btn-required-text {
+        position: sticky;
+        bottom: 80px;
+        width: 396px;
+        padding: 16px;
+        background-color: #F6F7F8;
+    }
+
+    .bottom-required {
+        margin: 0;
+    }
+
+    .two-buttons-position {
+        margin: 0;
+        width: 183px;
+        height: 56px;
+    }
+
+    .create-btn {
+        width: 183px;
+        height: 56px;
+    }
+
+    .cancel-btn {
+        display: none;
+    }
+
+    .close-btn {
+        display: none
+    }
+}
+
+@media(max-width:430px) {
+    .add-task-main-position {
+        position: inherit;
+        width: 310px;
+        border-radius: 0;
+    }
+
+    .add-task-card {
+        width: 310px;
+        gap: 8px;
+    }
+
+    .title-positioning {
+        width: 280px;
+        padding: 10px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 37px;
+        line-height: 46.4px;
+    }
+
+    .three-input-container {
+        width: 300px;
+        gap: 6px;
+    }
+
+    .input-title-container {
+        width: 270px;
+        height: 83px;
+    }
+
+    .simple-input {
+        width: 214px;
+        height: 20px;
+        padding: 10px 20px;
+    }
+
+    .description-container {
+        width: 270px;
+        height: 131px;
+    }
+
+    .textarea {
+        max-width: 214px;
+        width: 228px;
+        height: 52px;
+        padding: 16px 20px;
+    }
+
+    .assigned-container {
+        width: 270px;
+        height: 75px;
+    }
+
+    .foul-input {
+        width: 254px;
+        height: 48px;
+    }
+
+    .half-input {
+        width: 190px;
+        height: 16px;
+    }
+
+    .date-input-container {
+        width: 270px;
+        height: 83px;
+    }
+
+    .prio-container {
+        width: 270px;
+        height: 88px;
+    }
+
+    .prio-btn-container {
+        width: 270px;
+        height: 61px;
+    }
+
+    .prio-btn-position {
+        width: 270px;
+        height: 61px;
+    }
+
+    .prio-btn {
+        width: 80px;
+        height: 51px;
+        flex-direction: column;
+    }
+
+    .selection {
+        width: 256px;
+    }
+
+    .vertical-vector {
+        display: none;
+    }
+
+    .three-input-prio-container {
+        width: 300px;
+    }
+
+    .subtask-input{
+        width: 150px;
+    }
+
+    .btn-required-text {
+        width: 290px;
+        padding: 16px 0;
+        flex-direction: column;
+    }
+
+    .two-buttons-position {
+        margin: 0;
+        width: 183px;
+        height: 56px;
+    }
+
+    .create-btn {
+        width: 183px;
+        height: 56px;
+    }
+}

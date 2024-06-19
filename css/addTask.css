@@ -7,25 +7,29 @@ body {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .show {
     display: block;
 }
 
-.add-task-main-position {
+.add-task-popup-position{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.add-task-main-position{
+    position: absolute;
+    top: 96px;
+    left: 232px;
 }
 
 .add-task-card {
-    width: 1116px;
+    width: 1616px;
     height: 870px;
-    background-color: white;
     border-radius: 30px;
     position: relative;
 }
@@ -193,6 +197,10 @@ h1 {
     height: 4.6px;
 }
 
+.rotating-img180{
+    transform: rotate(180deg);
+}
+
 .vertical-vector{
     display: block;
     width: 0;
@@ -233,6 +241,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 56px;
     width: 440px;
 }
@@ -321,12 +330,18 @@ h1 {
     margin-right: 10px;
 }
 
+.btn-required-text{
+    width: 1116px;
+    position: absolute;
+    top: 750px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .two-buttons-position{
     width: 334px;
     height: 56px;
-    position: absolute;
-    top: 750px;
-    left: 716.25px;
+    margin-right: 65px;
     gap: 4px;
     align-items: center;
     justify-content: space-between;
@@ -361,15 +376,30 @@ h1 {
 }
 
 .bottom-required{
-    position: absolute;
-    top: 779px;
-    left: 74px;
     width: 170px;
     height: 27px;
+    margin-left: 75px;
+    text-align: center;
 }
 
 .required-text{
     font-weight: 400;
     font-size: 16px;
     line-height: 19.2px;
+}
+
+.added-confirmation{
+    width: 366px;
+    height: 74px;
+    border-radius: 20px;
+    background-color: #2A3647 !important;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.confirmation-img{
+    width: 30px;
+    height: 30px;
 }
