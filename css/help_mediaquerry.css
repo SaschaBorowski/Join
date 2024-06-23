@@ -1,0 +1,99 @@
+.sidebar-header {
+    display: block;
+  }
+  
+  .mobile-header,
+  .mobile-nav {
+    display: none;
+  }
+  
+  @media (max-width: 1050px) {
+    .sidebar-header {
+      display: none;
+    }
+    
+    .mobile-header,
+    .mobile-nav {
+      display: block;
+    }
+
+    .help {
+        margin-left: 96px;
+        margin-top: 24px;
+        padding-bottom: 100px;
+        margin-top: 125px;
+    }
+
+    .numbers {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    nav {
+        margin: 0 0 0 0 !important;
+    }
+
+    header {
+        position: fixed;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .help {
+        margin-left: 48px;
+        padding-bottom: 100px;
+        margin-top: 125px;
+    }
+}
+
+@media (max-width: 800px) {
+    .help {
+        margin-left: 36px;
+        padding-bottom: 100px;
+        margin-top: 125px;
+    }
+}
+
+@media (max-width: 600px) {
+    .help {
+        margin-left: 28px;
+        padding-bottom: 100px;
+        margin-top: 125px;
+    }
+}
+
+@media (max-width: 500px) {
+    .icon-mobile {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-mobile-a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .icon-mobile {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-mobile-a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .icon-mobile {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-mobile-a {
+        font-size: 10px;
+    }
+}

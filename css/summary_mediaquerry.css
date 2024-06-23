@@ -1,0 +1,160 @@
+.sidebar-header {
+    display: block;
+  }
+  
+  .mobile-header,
+  .mobile-nav,
+  .seperator-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 1050px) {
+    .sidebar-header {
+      display: none;
+    }
+    
+    .mobile-header,
+    .mobile-nav {
+      display: block;
+    }
+
+    .main-container-summary {
+        margin-left: 250px;
+        margin-top: 128px;
+    }
+
+    .card-container-summary {
+        margin-right: 15px;
+    }
+
+    nav {
+        margin: 0 0 0 0 !important;
+    }
+
+    header {
+        position: fixed;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .main-container-summary {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-container-summary {
+        margin-left: 150px;
+    }
+
+    .title {
+        font-size: 32px !important;
+    }
+
+    .summary-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .summary-card-middle {
+        width: 330px;
+        height: 150px;
+    }
+
+    .summary-card-bottom {
+        width: 110px;
+        height: 120px;
+    }
+
+    .card-bottom-container-summary {
+        gap: 0px;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .main-container-summary {
+        margin-left: 90px;
+    }
+
+    .seperator-mobile {
+        display: block;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+    .summary-title-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .headline-summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-container-summary {
+        margin-left: 50px;
+    }
+
+    .text-container {
+        font-size: 12px;
+    }
+
+    .icon-mobile {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-mobile-a {
+        font-size: 14px;
+    }
+
+    .summary-card:hover,
+    .summary-card-middle:hover,
+    .summary-card-bottom:hover {
+        scale: 1;
+        background-color: initial;
+        color: initial;
+    }
+
+    .summary-card:hover .icons-container-summary,
+    .summary-card-middle:hover .icons-container-summary,
+    .summary-card-bottom:hover .icons-container-summary {
+        background-color: initial;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .icon-mobile {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-mobile-a {
+        font-size: 12px;
+    }
+
+    .main-container-summary {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .icon-mobile {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-mobile-a {
+        font-size: 10px;
+    }
+}
+    
