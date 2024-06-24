@@ -2,26 +2,32 @@
     margin: 0;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1440px;
+}
+
 .userStoryContainer {
     width: 525px;
     height: 931px;
-    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 1px 0px #00000083;
+    border-radius: 30px;;
 }
 
 .userStoryContainerInside {
     width: 477px;
     height: 867px;
-    background-color: antiquewhite;
 }
 
 .userStoryHeadlineAndCloseButtonContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: cornflowerblue;
 
 }
 
@@ -31,7 +37,6 @@
 }
 
 .userStoryCloseButtonContainer img {
-    background-color: coral;
     padding: 8px;
     border-radius: 50%;
 }
@@ -46,9 +51,9 @@
     align-items: center;
     justify-content: center;
     width: 113px;
+    background-color: #0038FF;
     height: 28px;
     padding: 0 8px 0 8px;
-    background-color: #0038FF;
     border-radius: 8px;
     font-family: Inter;
     font-weight: 400;
@@ -61,7 +66,6 @@ h1 {
     font-weight: 700;
     font-size: 61px;
     margin-top: 16px;
-    background-color: chartreuse;
 }
 
 .taskDescription {
@@ -237,8 +241,7 @@ h1 {
 
 .userStorySubtaskTitelContainer {
     margin-left: 48px;
-    background-color: #3f88ee86;
-    width:fit-content;
+    width: fit-content;
     padding: 4px 8px 4px 0;
 }
 
@@ -248,7 +251,82 @@ h1 {
     font-size: 16px;
 }
 
-.userStorySubtaskTitelContainer p:hover {
-    background-color: #ccc;
-    padding: 4px 8px 4px 0;
+.subtaskCheckboxHoverEffect:hover {
+    background-color: #2c2c2c17;
+    width: fit-content;
+    border-radius: 8px;
+    padding-right: 8px;
 }
+
+.userStoryDeleteAndEditContainer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 24px;
+}
+
+.userStoryDeleteContainer {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.userStoryBackgroundImageDelete {
+    background: url(/img/userStory/delete.svg) no-repeat scroll;
+    background-size: 16px 16px;
+    padding-right: 8px;
+    background-position: left center;
+}
+
+.userStoryBackgroundImageDelete:hover {
+    background: url(/img/userStory/delete_blue.svg) no-repeat scroll;
+    background-size: 16px 16px;
+    padding-right: 8px;
+    background-position: left center;
+    color: #29ABE2;
+}
+
+.userStoryEditContainer {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.userStoryBackgroundImageEdit {
+    background: url(/img/userStory/edit.svg) no-repeat scroll;
+    background-size: 16px 16px;
+    padding-right: 8px;
+    background-position: left center;
+}
+
+.userStoryBackgroundImageEdit:hover {
+    background: url(/img/userStory/edit_blue.svg) no-repeat scroll;
+    background-size: 16px 16px;
+    padding-right: 8px;
+    background-position: left center;
+    color: #29ABE2;
+}
+
+.userStoryCutLine {
+    width: 1px;
+    background-color: #00000021;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.userStoryDeleteTextContainer {
+    padding-left: 24px;
+}
+
+.userStoryEditTextContainer {
+    padding-left: 16px;
+}
+
