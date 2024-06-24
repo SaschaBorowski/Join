@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Story Edit</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/userStory_edit.css">
+</head>
+
+<body>
+    <div class="userStoryEditContainer">
+        <div class="userStoryEditContainerInside">
+            <div class="userStoryEditCloseButtonContainer">
+                <img src="./img/userStoryEdit/close.png" alt="Close">
+            </div>
+            <form action="">
+
+                <div>
+                    <div class="mTop16">
+                        <label class="editTitleHeadlineContainer" for="title">Title</label>
+                    </div>
+                    <div class="editTitleInputContainer">
+                        <input type="text" required value="Kochwelt Page & Recipe Recommender">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mTop16">
+                        <label class="editDescriptionContainer" for="description">Description</label>
+                    </div>
+                    <div class="editDescriptionTextAreaContainer mTop8">
+                        <textarea name="description"
+                            id="description">Build start page with recipe recommendation</textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mTop16">
+                        <label class="editDueDateContainer" for="Due date">Due date</label>
+                    </div>
+                    <div class="editDueDateInputContainer mTop8">
+                        <input type="date" required>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mTop16">
+                        <label class="editPriorityHeadline" for="priority">Priority</label>
+                    </div>
+                    <div class="editPriorityAllButtonsContainer">
+                        <div class="editPriorityButtonContainer">
+                            <div>Urgent</div>
+                            <div>
+                                <img src="./img/userStoryEdit/prio_high.svg" alt="High priority">
+                            </div>
+                        </div>
+                        <div class="editPriorityButtonContainer">
+                            <div>Medium</div>
+                            <div>
+                                <img src="./img/userStoryEdit/prio_medium.svg" alt="Medium priority">
+                            </div>
+                        </div>
+                        <div class="editPriorityButtonContainer">
+                            <div>Low</div>
+                            <div>
+                                <img src="./img/userStoryEdit/prio_low.svg" alt="Low priority">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
