@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Task</title>
+    <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
     <link rel="stylesheet" href="/css/addTask.css">
     <link rel="stylesheet" href="/css/addTaskMobile.css">
     <link rel="stylesheet" href="/css/fonts.css">
-    <script src="/JS/includehtml.js"></script>
+    <script src="/JS/styling.js"></script>
 </head>
 
 <body>
@@ -37,13 +38,13 @@
                     <span class="medium-font medium-font-color">Assigned to</span>
                     <div class="foul-input">
                         <input type="text" class="half-input medium-font" placeholder="Select contacts to assign">
-                        <div class="rotating">
+                        <div class="rotating" id="rotate" onclick="showPersons()">
                             <img class="rotating-img " src="/img/drop-down-arrow.png">
                         </div>
                     </div>
-                    <div><!--Here must be the dropdown site implemented with js--></div>
                 </div>
             </div>
+            <div class="dropdown-list flex-column hide" id="dropdown-list"><!--Here must be the dropdown site implemented with js--></div>
             <div class="vertical-vector"></div>
             <div class="three-input-prio-container flex-column">
                 <div class="date-input-container flex-column">
@@ -57,9 +58,9 @@
                 <div class="prio-container flex-column">
                     <span class="medium-font medium-font-color">Prio</span>
                     <div class="prio-btn-position"> <!--Images andbg-color must be changed with javascript-->
-                        <div class="prio-btn medium-font">Urgent <img src="/img/urgent-prio-icon-inactive.png"></div>
-                        <div class="prio-btn medium-font">Medium <img src="/img/medium-prio-icon-inactive.png"></div>
-                        <div class="prio-btn medium-font">Low <img src="/img/low-prio-icon-inactive.png"></div>
+                        <div class="prio-btn medium-font urgent" id="urgent"onclick="addUrgent()">Urgent <img id="activeUrg" src="/img/urgent-prio-icon-inactive.png"></div>
+                        <div class="prio-btn medium-font medium" id="medium" onclick="addMedium()">Medium <img id="activeMed" src="/img/medium-prio-icon-inactive.png"></div>
+                        <div class="prio-btn medium-font low" id="low" onclick="addLow()">Low <img id="activeLow" src="/img/low-prio-icon-inactive.png"></div>
                     </div>
                 </div>
                 <div class="assigned-container flex-column">
@@ -73,17 +74,17 @@
                 <div class="assigned-container flex-column"> <!--Must add a new container below when Subtask added-->
                     <span class="medium-font medium-font-color">Subtasks</span>
                     <div class="foul-input">
-                        <input type="text" class="subtask-input medium-font" placeholder="Add new subtask">
-                        <div class="add-new-subtask small-icon-div">
+                        <input type="text" class="subtask-input medium-font" id="subtask" placeholder="Add new subtask">
+                        <div class="add-new-subtask small-icon-div" id="addSubtaskIcon" onclick="addSubtask()">
                             <img class="smaller-icon" src="/img/add-plus-icon.png">
                         </div>
-                        <div class="close-approve-container">
-                            <!--Must change display none to flex when new item added-->
-                            <div class="small-icon-div"><img class="small-icon" src="/img/Close.png"></div>
+                        <div class="close-approve-container hide" id="addRemoveContainer">
+                            <div class="small-icon-div" onclick="closeSubtask()"><img class="small-icon" src="/img/Close.png"></div>
                             <span class="small-input-vertical-vector"></span>
-                            <div class="small-icon-div"><img class="smaller-icon" src="/img/check_dark_icon.svg"></div>
+                            <div class="small-icon-div" onclick="aproveSubtask()"><img class="smaller-icon" src="/img/check_dark_icon.svg"></div>
                         </div>
                     </div>
+                    <div id="subtaskDisplay" class="subtask-display flex-column"></div>
                 </div>
             </div>
             <div class="btn-required-text flex-row">
