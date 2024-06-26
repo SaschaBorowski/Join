@@ -7,6 +7,7 @@
     <title>User Story Edit</title>
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/userStory_edit.css">
+    <script src="./JS/userStoryEdit/userStoryEditStyle.js"></script>
 </head>
 
 <body>
@@ -50,29 +51,72 @@
                         <label class="editPriorityHeadline" for="priority">Priority</label>
                     </div>
                     <div class="editPriorityAllButtonsContainer">
-                        <div class="editPriorityButtonContainer">
+                        <div onclick="addUrgent()" id="urgent" class="editPriorityButtonContainer">
                             <div>Urgent</div>
                             <div>
-                                <img src="./img/userStoryEdit/prio_high.svg" alt="High priority">
+                                <img id="activeUrg" src="./img/userStoryEdit/urgent-prio-icon-inactive.svg" alt="High priority">
                             </div>
                         </div>
-                        <div class="editPriorityButtonContainer">
+                        <div onclick="addMedium()" id="medium" class="editPriorityButtonContainer">
                             <div>Medium</div>
                             <div>
-                                <img src="./img/userStoryEdit/prio_medium.svg" alt="Medium priority">
+                                <img id="activeMed" src="./img/userStoryEdit/prio_medium_inactive.svg" alt="Medium priority">
                             </div>
                         </div>
-                        <div class="editPriorityButtonContainer">
+                        <div onclick="addLow()" id="low" class="editPriorityButtonContainer">
                             <div>Low</div>
                             <div>
-                                <img src="./img/userStoryEdit/prio_low.svg" alt="Low priority">
+                                <img id="activeLow" src="./img/userStoryEdit/low-prio-icon-inactive.png" alt="Low priority">
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="mTop24">
+                    <label class="userStory_assignedToHeadline" for="assignedTo">Assigned to</label>
+                </div>
+                <div class="userStoryAssignedToInputAndImageContainer mTop8">
+                    <input type="text" placeholder="Select contacts to assign">
+                    <div class="userStoryAssignedToDropdownMenuImageContainer">
+                        <img src="./img/userStoryEdit/drop-down-arrow.png" alt="dropdownmenu">
+                    </div>
+                </div>
+                <div class="userStoryContactsContainer mTop8">
+                    <div class="userStoryContacts">as</div>
+                    <div class="userStoryContacts">de</div>
+                    <div class="userStoryContacts">ef</div>
+                </div>
+                <div class="userStorySubtaskHeadlineContainer mTop16">
+                    <label class="userStorySubtaskHeadline" for="subtasks">Subtasks</label>
+                </div>
+                <div class="userStorySubtasksInputContainer mTop8">
+                    <input type="text" placeholder="Add new subtask">
+                    <div class="userStorySubtasksDropdownImageContainer">
+                        <img src="./img/userStoryEdit/add-plus-icon.png" alt="dropdownmenu">
+                    </div>
+                </div>
+                <div class="userStorySubtasksContainer mTop8">
+                    <table>
+
+
+                        <div class="userStorySubtaskListedItemContainer subtaskListedItem0">
+                            <li>Implement Recipe Recommendation</li>
+                            <div class="userStorySubtaskListedItemImageContainer subtaskListedImage0">
+                                <img class="mRight8" src="./img/userStoryEdit/edit-dark.png" alt="edit">
+                                <img class="mRight16" src="./img/userStoryEdit/delete.png" alt="delete">
+                            </div>
+                        </div>
 
 
 
+                        <div class="userStorySubtaskListedItemContainer subtaskListedItem1">
+                            <li class="userStorySubtaskListedItem">Start Page Layout</li>
+                            <div class="userStorySubtaskListedItemImageContainer subtaskListedImage1">
+                                <img class="mRight8" src="./img/userStoryEdit/edit-dark.png" alt="edit">
+                                <img class="mRight16" src="./img/userStoryEdit/delete.png" alt="delete">
+                            </div>
+                        </div>
+                    </table>
+                </div>
 
 
             </form>

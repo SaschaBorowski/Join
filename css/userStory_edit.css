@@ -2,12 +2,24 @@
     margin: 0;
 }
 
+.mTop24 {
+    margin-top: 24px;
+}
+
 .mTop16 {
     margin-top: 16px;
 }
 
 .mTop8 {
     margin-top: 8px;
+}
+
+.mRight16 {
+    margin-right: 16px;
+}
+
+.mRight8 {
+    margin-right: 8px;
 }
 
 body {
@@ -17,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.137);
+    overflow: scroll;
 }
 
 .userStoryEditContainer {
@@ -31,7 +44,6 @@ body {
 }
 
 .userStoryEditContainerInside {
-    background-color: antiquewhite;
     width: 461px;
     height: 100%;
 }
@@ -191,5 +203,164 @@ body {
 .editPriorityButtonContainer:hover {
     cursor: pointer;
     box-shadow: 4px 3px 6px 2px #00000025;
+}
+
+.userStory_assignedToHeadline {
+    font-family: Inter;
+    font-size: 16px;
+    color: #2A3647;
+}
+
+.userStoryAssignedToInputAndImageContainer {
+    width: 460px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userStoryAssignedToInputAndImageContainer input {
+    width: 460px;
+    height: 22px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: Inter !important;
+}
+
+.userStoryAssignedToDropdownMenuImageContainer {
+    width: 34px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.userStoryAssignedToDropdownMenuImageContainer img {
+    width: 7.21px;
+    height: 4.6px;
+}
+
+.userStoryAssignedToDropdownMenuImageContainer:hover {
+    background-color: #D1D1D1;
+}
+
+.userStoryContactsContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.userStoryContacts {
+    height: 32px;
+    width: 32px;
+    /* Color changed by Contact Type */
+    background-color: green;
+    border-radius: 50%;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.userStorySubtaskHeadline {
+    font-family: Inter;
+    font-size: 16px;
+    color: #2A3647;
+}
+
+.userStorySubtasksInputContainer {
+    width: 460px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userStorySubtasksInputContainer input {
+    width: 460px;
+    height: 22px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: Inter !important;
+}
+
+.userStorySubtasksDropdownImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.userStorySubtasksDropdownImageContainer img {
+    padding: 8px;
+}
+
+.userStorySubtasksDropdownImageContainer:hover {
+    background-color: #D1D1D1;
+}
+
+.userStorySubtasksContainer {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.userStorySubtaskListedItemContainer {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding-left: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease-in-out; /* Smooth transition */
+}
+
+.userStorySubtaskListedItemContainer:hover {
+    cursor: pointer;
+}
+
+.userStorySubtaskListedItemImageContainer {
+    display:flex;
+    align-items: center;
+    
+}
+
+.userStorySubtaskListedItemImageContainer img {
+    width: 14px;
+    height: 14px;
+    transition: display 0.15s ease-in-out; /* Smooth transition */
+}
+
+.userStorySubtaskListedItemImageContainer img:hover {
+    scale: 1.07;
 }
 
