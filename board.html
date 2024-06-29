@@ -8,9 +8,14 @@
     <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <script src="/js/includehtml.js"></script>
 </head>
 
-<body>
+<body onload="includeHTML()">
+    <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
+    <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
+    <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
+
     <div class="headlineInputButtonContainer">
         <h1>Board</h1>
         <div class="inputButtonContainer">

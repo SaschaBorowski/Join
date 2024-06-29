@@ -113,3 +113,8 @@ h1 {
     font-weight: 400;
     font-size: 20px;
 }
+
+.display-flex {
+    display: flex;
+    margin-left: 232px; 
+}

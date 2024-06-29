@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
-    <link rel="stylesheet" href="./css/marcel_test_contact.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/test.css">
+    <!-- <link rel="stylesheet" href="./css/test.css"> -->
     <script src="./JS/includehtml.js"></script>
 </head>
 
 
-    <body onload="includeHTML()">
-        <div w3-include-html="test.html"></div>
+<body onload="includeHTML()">
+    <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
+    <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
+    <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
 
     <div class="display-flex">
         <div class="contact-container" id="contact-container">

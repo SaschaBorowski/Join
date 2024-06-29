@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,66 @@
     <link rel="stylesheet" href="./css/signup.css">
     <link rel="stylesheet" href="./css/fonts.css">
 </head>
+
 <body>
     <header>
         <div class="logo-image">
-            <a href="index.html">
+            <a href="login.html">
                 <img src="./img/logo_dark.png" alt="Logo Join">
             </a>
         </div>
     </header>
     <div class="main-login-container">
         <div class="main-login-content">
-        <div class="signup-header">
-            <div class="back-login">
-                <a href="index.html">
-                    <img src="./img/arrow.png" alt="Back Arrow">
-                </a>
+            <div class="signup-header">
+                <div class="back-login">
+                    <a href="login.html">
+                        <img src="./img/arrow.png" alt="Back Arrow">
+                    </a>
+                </div>
+                <div class="signup-headline">
+                    <h1>Sign up</h1>
+                </div>
             </div>
-            <div class="signup-headline">
-                <h1>Sign up</h1>
+            <div class="underline-login">
+                <img src="./img/underline_login.png" alt="">
             </div>
-        </div>
-        <div class="underline-login">
-            <img src="./img/underline_login.png" alt="">
-        </div>
-        <form id="regestrationForm">
-            <div class="input-login-field">
-                <input type="text" required class="name" placeholder="Name">
+            <form id="regestrationForm">
                 <div class="input-login-field">
-                    <div class="input-field-mail">
-                       <input id="loginEmail" type="email" required placeholder="Email"> 
-                       <img src="./img/mail.png" alt="">
+                    <input type="text" required class="name" placeholder="Name">
+                    <div class="input-login-field">
+                        <div class="input-field-mail">
+                            <input id="loginEmail" type="email" required placeholder="Email">
+                            <img src="./img/mail.png" alt="">
+                        </div>
+                        <div class="input-field-password">
+                            <input id="loginPassword" type="password" required placeholder="Password"
+                                class="password-field">
+                            <img src="./img/lock.png" alt="">
+                        </div>
+                        <div class="input-field-password">
+                            <input class="password-field" type="password" required placeholder="Confirm Password">
+                            <img src="./img/lock.png" alt="">
+                        </div>
                     </div>
-                    <div class="input-field-password">
-                        <input id="loginPassword" type="password" required placeholder="Password" class="password-field">
-                        <img src="./img/lock.png" alt="">
+                    <div class="accept-privacy-policy">
+                        <input type="checkbox">
+                        <p>I accept the <a href="privacyPolicy.html">Privacy policy</a></p>
                     </div>
-                    <div class="input-field-password">
-                        <input class="password-field" type="password" required placeholder="Confirm Password">
-                        <img src="./img/lock.png" alt="">
+                    <div class="sign-up-container">
+                        <div class="sign-up">
+                            <button class="btn">Sign up</button>
+                        </div>
                     </div>
                 </div>
-                <div class="accept-privacy-policy">
-                    <input type="checkbox">
-                    <p>I accept the  <a href="privacyPolicy.html">Privacy policy</a></p>
-                </div>
-                <div class="sign-up-container">
-                    <div class="sign-up">
-                        <button class="btn">Sign up</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
     </div>
     <div class="footer-login">
         <a href="privacyPolicy.html">Privacy Policy</a>
         <a href="legalNotice.html">Legal notice</a>
     </div>
-    
+
 </body>
+
 </html>

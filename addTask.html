@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="/css/addTask.css">
     <link rel="stylesheet" href="/css/addTaskMobile.css">
     <link rel="stylesheet" href="/css/fonts.css">
-    <script src="/JS/styling.js"></script>
+    <script src="/JS/addTask/styling.js"></script>
+    <script src="/JS/includehtml.js"></script>
 </head>
 
-<body>
+<body onload="includeHTML()">
+    <div w3-include-html="templates/sidebarHeaderTemplate.html"></div>
+
     <div class="add-task-main-position"> <!--Change to add-task-main-position-->
         <form class="add-task-card"> <!--Remove background color-->
             <div class="title-positioning">
