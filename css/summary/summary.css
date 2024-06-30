@@ -1,15 +1,12 @@
 * {
     margin: 0;
     font-family: 'Inter';
-    box-sizing: border-box;
-}
-
-.border-box {
-    box-sizing: border-box;
+    
 }
 
 body {
     background-color: #f6f7f8;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -19,9 +16,9 @@ h1 {
 
 .main-container-summary {
     display: flex;
-    margin-left: 312px;
+    margin-left: 296px;
+    margin-top: 192px;
     height: calc(100vh - 230px);
-    
 }
 
 .main-container-summary .card-container-summary, .main-container-summary .greeting-container {

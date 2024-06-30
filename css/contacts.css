@@ -6,10 +6,6 @@ body {
     font-family: 'inter';
 }
 
-.display-flex {
-    display: flex;
-}
-
 .contact-container {
     display: flex;
     flex-direction: column;
@@ -116,5 +112,6 @@ h1 {
 
 .display-flex {
     display: flex;
-    margin-left: 232px; 
+    margin-left: 233px;
+    margin-top: 96px;
 }

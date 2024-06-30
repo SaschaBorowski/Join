@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
     <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
-    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/privacyPolicy.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    
     <!-- <link rel="stylesheet" href="./css/test.css"> -->
     <script src="./JS/includehtml.js"></script>
+    <script src="./JS/goBack.js"></script>
 </head>
 
 <body onload="includeHTML()">
@@ -17,14 +19,14 @@
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
 
-    <main>
+    <div class="privacyMainContainer">
      <div>
         <div>
             <div>
                 <div>
                     <div class="HeadlineAndArrowLeft">
                         <h1>Privacy Policy</h1>
-                        <img src="./img/arrow-left-line.png" alt="Previous">
+                        <img onclick="goBack()" src="./img/arrow-left-line.png" alt="Previous">
                     </div>
                     <p>Last updated: June 13, 2024</p>
                     <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure
@@ -375,7 +377,7 @@
             </div>
         </div>
     </div>
-</main>
+</div>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    
 }
 
 body {
@@ -14,17 +15,17 @@ body {
     display: block;
 }
 
-.add-task-popup-position{
+.add-task-popup-position {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.add-task-main-position{
+.add-task-main-position {
     position: absolute;
-    top: 96px;
-    left: 232px;
+    top: 130px;
+    left: 223px;
 }
 
 .add-task-card {
@@ -42,13 +43,13 @@ body {
     width: 466px;
 }
 
-.close-btn{
+.close-btn {
     position: absolute;
     top: 64px;
     left: 1044px;
 }
 
-.close-btn:hover{
+.close-btn:hover {
     cursor: pointer;
 }
 
@@ -63,7 +64,7 @@ h1 {
     flex-direction: column;
 }
 
-.flex-row{
+.flex-row {
     display: flex;
     flex-direction: row;
 }
@@ -95,7 +96,7 @@ h1 {
     font-family: Inter !important;
 }
 
-.medium-font-color{
+.medium-font-color {
     color: #2A3647;
 }
 
@@ -149,7 +150,7 @@ h1 {
     z-index: 1;
 }
 
-.foul-input{
+.foul-input {
     width: 440px;
     height: 48px;
     background-color: #FFFFFF;
@@ -161,12 +162,12 @@ h1 {
     justify-content: space-between;
 }
 
-.foul-input:focus-within{
+.foul-input:focus-within {
     outline: none;
     border-color: #9694f0;
 }
 
-.foul-input:hover{
+.foul-input:hover {
     cursor: pointer;
 }
 
@@ -179,7 +180,7 @@ h1 {
     outline: none;
 }
 
-.rotating{
+.rotating {
     width: 24px;
     height: 24px;
     display: flex;
@@ -189,20 +190,20 @@ h1 {
     border-radius: 100px;
 }
 
-.rotated{
+.rotated {
     transform: rotate(180deg);
 }
 
-.rotating:hover{
+.rotating:hover {
     background-color: #D1D1D1;
 }
 
-.rotating-img{
+.rotating-img {
     width: 7.21px;
     height: 4.6px;
 }
 
-.dropdown-list{
+.dropdown-list {
     background-color: white;
     width: 400px;
     height: 180px;
@@ -213,7 +214,7 @@ h1 {
     overflow-y: scroll;
 }
 
-.vertical-vector{
+.vertical-vector {
     display: block;
     width: 0;
     height: 424px;
@@ -223,7 +224,7 @@ h1 {
     border: 1px solid #D1D1D1;
 }
 
-.three-input-prio-container{
+.three-input-prio-container {
     width: 440px;
     height: 416px;
     position: absolute;
@@ -233,23 +234,23 @@ h1 {
     justify-content: space-between;
 }
 
-.date-input-container{
+.date-input-container {
     gap: 8px;
     height: 96px;
     width: 440px;
 }
 
-.simple-input:hover{
+.simple-input:hover {
     cursor: pointer;
 }
 
-.prio-container{
+.prio-container {
     width: 440px;
     height: 120px;
     gap: 8px;
 }
 
-.prio-btn-position{
+.prio-btn-position {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -258,7 +259,7 @@ h1 {
     width: 440px;
 }
 
-.prio-btn{
+.prio-btn {
     width: 136px;
     height: 56px;
     border-radius: 10px;
@@ -269,16 +270,16 @@ h1 {
     gap: 8px;
     transition: all 1ms ease-in-out;
     background-color: white;
-    box-shadow: -0.5px 0.5px 4px 0.5px rgba(0,0,0,0.10);
+    box-shadow: -0.5px 0.5px 4px 0.5px rgba(0, 0, 0, 0.10);
 }
 
-.prio-btn:hover{
+.prio-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 3px rgba(0, 0, 0, 0.1);
 }
 
-.selection{
+.selection {
     width: 440px;
     height: 48px;
     border-radius: 10px;
@@ -287,7 +288,7 @@ h1 {
     outline: none;
 }
 
-.selection:hover{
+.selection:hover {
     cursor: pointer;
 }
 
@@ -300,7 +301,7 @@ h1 {
     outline: none;
 }
 
-.close-approve-container{
+.close-approve-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -309,14 +310,14 @@ h1 {
     margin-right: 10px;
 }
 
-.small-input-vertical-vector{
+.small-input-vertical-vector {
     border: 1px solid #D1D1D1;
     width: 0px;
     height: 24px;
     margin: 0 0px;
 }
 
-.small-icon-div{
+.small-icon-div {
     border-radius: 100px;
     width: 24px;
     height: 24px;
@@ -325,43 +326,43 @@ h1 {
     align-items: center;
 }
 
-.small-icon-div:hover{
+.small-icon-div:hover {
     background-color: #D1D1D1;
     cursor: pointer;
 }
 
-.small-icon{
+.small-icon {
     width: 24px;
     height: 24px;
 }
 
-.smaller-icon{
+.smaller-icon {
     width: 14px;
     height: 14px;
 }
 
-.add-new-subtask{
+.add-new-subtask {
     margin-right: 10px;
 }
 
-.subtask-display{
+.subtask-display {
     width: 400px;
     max-height: 80px;
     padding: 10px 20px;
 }
 
-.add-task-list{
+.add-task-list {
     width: 380px;
     max-height: 60px;
     overflow-y: scroll;
 }
 
-.listItem{
-   justify-content: space-between;
+.listItem {
+    justify-content: space-between;
     margin-bottom: 5px;
 }
 
-.btn-required-text{
+.btn-required-text {
     width: 1116px;
     position: absolute;
     top: 750px;
@@ -370,7 +371,7 @@ h1 {
     z-index: 2;
 }
 
-.two-buttons-position{
+.two-buttons-position {
     width: 334px;
     height: 56px;
     margin-right: 65px;
@@ -379,7 +380,7 @@ h1 {
     justify-content: space-between;
 }
 
-.btn-styling{
+.btn-styling {
     background-color: white;
     border: 1px solid #2A3647;
     border-radius: 10px;
@@ -389,38 +390,38 @@ h1 {
     align-items: center;
 }
 
-.btn-styling:hover{
+.btn-styling:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.cancel-btn{
+.cancel-btn {
     width: 126px;
     height: 56px;
     color: #2A3647;
 }
 
-.create-btn{
+.create-btn {
     width: 183px;
     height: 56px;
     background-color: #2A3647;
     color: white;
 }
 
-.bottom-required{
+.bottom-required {
     width: 170px;
     height: 27px;
     margin-left: 75px;
     text-align: center;
 }
 
-.required-text{
+.required-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 19.2px;
 }
 
-.added-confirmation{
+.added-confirmation {
     width: 366px;
     height: 74px;
     border-radius: 20px;
@@ -431,7 +432,7 @@ h1 {
     justify-content: space-evenly;
 }
 
-.confirmation-img{
+.confirmation-img {
     width: 30px;
     height: 30px;
 }

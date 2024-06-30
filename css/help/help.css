@@ -1,7 +1,6 @@
 * {
     margin: 0;
     font-family: 'Inter';
-    box-sizing: border-box;
 }
 
 .body {
@@ -11,12 +10,10 @@
 h1 {
     font-size: 61px;
     font-weight: 700;
-    padding-bottom: 36px;
 }
 
 h2 {
     margin-top: 0;
-    margin-bottom: 8px;
     font-weight: 700;
     font-size: 27px;
 }
@@ -27,10 +24,10 @@ h3 {
 }
 
 .help {
-    margin-left: 300px;
-    margin-top: 50px;
-    margin-right: 6%;
-    margin-bottom: 80px;
+    margin-left: 296px;
+    margin-top: 192px;
+    margin-right: 64px;
+    padding-bottom: 32px;
 }
 
 .help-header h1 {
@@ -42,18 +39,19 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 32px;
 }
 
 .help-header img {
     width: 32px;
     height: 32px;
-    cursor: pointer;
 }
 
 .help-header img:hover {
     border-radius: 50%;
     background-color: #f1f1f1;
     scale: 1.1;
+    cursor: pointer;
 }
 
 .numbers {

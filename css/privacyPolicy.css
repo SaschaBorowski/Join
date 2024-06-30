@@ -5,7 +5,7 @@
 h1 {
     font-family: Inter;
     font-weight: 700;
-    font-size: 59px;
+    font-size: 61px;
 }
 
 h2 {
@@ -25,29 +25,24 @@ a {
 }
 
 body {
-    margin: 0;
     font-family: Inter;
     font-weight: 400;
     font-size: 16px;
     background-color: #F6F7F8;
+    overflow-x: hidden;
 }
 
-main {
-    margin-left: 232px; 
- /* padding-top: 96px; */ 
-    padding-left: 48px;
-    padding-right: 96px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px; 
-    overflow: hidden; 
+.privacyMainContainer {
+    margin-top: 192px;
+    margin-left: 296px;
+    margin-right: 64px;
+    padding-bottom: 32px;
 }
 
 .HeadlineAndArrowLeft {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px; 
     margin-bottom: 24px;
 }
 

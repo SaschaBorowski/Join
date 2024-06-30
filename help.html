@@ -10,7 +10,10 @@
     <!-- <link rel="stylesheet" href="./css/marcel_test_header_mobile.css">
     <link rel="stylesheet" href="./css/marcel_test_mobile_Navbar.css"> -->
     <link rel="stylesheet" href="./css/help/help_mediaquerry.css">
+
     <script src="./JS/includehtml.js"></script>
+    <script src="./JS/goBack.js"></script>
+
   </head>
     <body onload="includeHTML()">
         <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
@@ -21,7 +24,7 @@
     <div class="help">
       <div class="help-header">
         <h1>Help</h1>
-        <a href=""><img src="./img/arrow.png" alt="" /></a>
+        <img onclick="goBack()" src="./img/arrow-left-line.png" alt=""/>
       </div>
       <div class="welcome">
         <p>Welcome to the help page for <b>Join</b>, your guide to using our kanban project management tool. Here, we'll provide an overview of what Join is, how it can benefit you, and how to use it.</p><br>

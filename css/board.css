@@ -22,6 +22,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-right: 150px;
+    margin-top: 192px;
 }
 
 .inputButtonContainer {

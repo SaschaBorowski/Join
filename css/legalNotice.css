@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -8,29 +7,26 @@ body {
     background-color: #F6F7F8;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9; 
+
+.mainContainer {
+    margin-top: 192px;
+    margin-left: 296px;
+    margin-right: 64px;
 }
 
 .HeadlineAndArrowLeft {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px; 
-    margin-left: 232px; 
-   /* margin-top: 96px; */
+    margin-bottom: 24px;
 }
 
 .HeadlineAndArrowLeft h1 {
     font-weight: 700;
     font-size: 61px;
-    padding-top: 96px;
 }
 
 .HeadlineAndArrowLeft img {
@@ -48,8 +44,7 @@ header {
 .legalNoticeTextContainer,
 .legalNoticeImprintContainer {
     margin-top: 30px;
-    margin-left: 232px; 
-    padding: 0 40px;
+    padding-bottom: 32px;
 }
 
 .legalNoticeImprintContainer h2 {
