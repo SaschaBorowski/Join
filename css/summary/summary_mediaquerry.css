@@ -62,14 +62,26 @@
     }
 
     .summary-card-bottom {
-        width: 110px;
-        height: 120px;
+        width: 90px !important;
+        height: 100px !important;
+        margin: 2px;
     }
 
     .card-bottom-container-summary {
         gap: 0px;
     }
 
+    .number-container {
+        font-size: 42px !important;
+    }
+
+    .text-container {
+        font-size: 16px;
+    }
+
+    .card-container-summary {
+        padding-left: 16px;
+    }
 
 }
 
