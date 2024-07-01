@@ -1,14 +1,14 @@
-@media(max-width:1050px) {
+@media(max-width:1370px) {
     .add-task-main-position {
         position: inherit;
         width: 428px;
-        height: 1150px;
+        height: 1250px;
         border-radius: 0;
     }
 
     .add-task-card {
         width: 428px;
-        height: 1150px;
+        height: 1250px;
         border-radius: 0;
         display: flex;
         flex-direction: column;
@@ -147,9 +147,21 @@
     .close-btn {
         display: none
     }
+
+    .subtask-display{
+        padding: 10px 0;
+    }
+
+    .add-task-list{
+        padding: 0 0 0 10px;
+    }
 }
 
-@media(max-width:430px) {
+@media(max-width:450px) {
+    body{
+        overflow-x: hidden;
+    }
+
     .add-task-main-position {
         position: inherit;
         width: 310px;

@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: Inter;
-    background-color: rgb(0, 0, 0, 0.5);
 }
 
 input::-webkit-outer-spin-button,
@@ -10,6 +9,9 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+.hide {
+    display: none;
+}
 
 h1 {
     font-weight: 700;
@@ -30,10 +32,12 @@ h2 {
 }
 
 .contact-card-placement {
+    width: 100vw;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.contact-card {
+.new-contact-card {
     width: 1212px;
     height: 592px;
     border-radius: 30px;
@@ -45,9 +49,10 @@ h2 {
 
 .text-logo-area {
     width: 467px;
-    height: 594px;
+    height: 593px;
     border-radius: 30px 0 0 30px;
     background-color: #2A3647;
+    display: flex;
     flex-direction: column;
     gap: 12px;
 }
@@ -73,7 +78,6 @@ h2 {
 
 .vector {
     width: 90px;
-    border: 3px;
 }
 
 .close-btn {
@@ -109,7 +113,6 @@ h2 {
     left: 550px;
     border-radius: 70px;
     border: 3px solid white;
-    gap: 10px;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -124,11 +127,11 @@ h2 {
     position: absolute;
     top: 137px;
     left: 742px;
-    gap: 32px;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    gap: 32px;
 }
 
 .contact-input {
@@ -146,7 +149,7 @@ h2 {
     border-color: #9694f0;
 }
 
-.input{
+.input {
     width: 356px;
     height: 24px;
     border: none;
@@ -162,7 +165,7 @@ h2 {
     line-height: 24px;
 }
 
-.input-img{
+.input-img {
     width: 24px;
     height: 24px;
     margin-right: 20px;
@@ -174,11 +177,11 @@ h2 {
     position: absolute;
     top: 400px;
     left: 742px;
-    gap: 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
 }
 
 .cancel-btn {
@@ -188,7 +191,6 @@ h2 {
     border: 1px solid #2A3647;
     color: #2A3647;
     background-color: white;
-    gap: 4px;
     padding: 16px;
     transition: 100ms ease-in-out;
 }
@@ -196,7 +198,7 @@ h2 {
 .cancel-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
-    border: 1px solid #29abe2;
+    border-color: #29abe2;
     color: #29abe2;
 }
 
@@ -210,7 +212,6 @@ h2 {
     height: 57px;
     border-radius: 10px;
     padding: 16px;
-    gap: 4px;
     background-color: #2A3647;
     border: none;
     color: white;
@@ -237,10 +238,8 @@ h2 {
     background-color: #29abe2;
 }
 
-
-
-@media(max-width:1250px) {
-    .contact-card {
+@media (max-width: 1339px) {
+    .new-contact-card {
         width: 396px;
         height: 760px;
     }
@@ -259,8 +258,7 @@ h2 {
     .slogan-area {
         width: 282px;
         height: 104px;
-        margin: 66px 24px 66px 24px;
-
+        margin: 66px 24px;
     }
 
     h1 {
@@ -316,7 +314,6 @@ h2 {
     .input {
         width: 322px;
         height: 14px;
-
     }
 
     .buttons-area {
@@ -325,7 +322,6 @@ h2 {
         top: 629px;
         left: 97px;
         display: block;
-
     }
 
     .cancel-btn {
@@ -339,8 +335,8 @@ h2 {
     }
 }
 
-@media(max-width: 400px) {
-    .contact-card {
+@media (max-width: 416px) {
+    .new-contact-card {
         width: 280px;
         height: 570px;
     }
@@ -355,7 +351,7 @@ h2 {
     .slogan-area {
         width: 252px;
         height: 80px;
-        margin: 40px 24px 40px 24px;
+        margin: 40px 24px;
     }
 
     h1 {
@@ -400,7 +396,7 @@ h2 {
         padding: 13px;
     }
 
-    .input-img{
+    .input-img {
         margin: 0;
     }
 
@@ -417,7 +413,7 @@ h2 {
         padding: 10px 8px;
     }
 
-    .check{
+    .check {
         display: none;
     }
 }

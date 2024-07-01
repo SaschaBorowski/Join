@@ -9,6 +9,7 @@
 body {
     margin-left: 328px;
     background-color: #F6F7F8;
+    position: relative;
 }
 
 h1 {
@@ -269,3 +270,13 @@ input[type=text]:focus {
     /*Border entfernen sobald die Farben von den Kontakten mit Javascript gerendert werden*/
     border: 1px solid black;
 }
+
+.add-task-popup{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 225ms ease-in-out;
+    z-index: 10;
+  }
