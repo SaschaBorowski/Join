@@ -18,12 +18,12 @@
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
 
-    <div class="add-task-main-position"> <!--Change to add-task-main-position-->
-        <form class="add-task-card"> <!--Remove background color-->
+    <div id="add-task-position" class="add-task-main-position"> <!--Change to add-task-main-position-->
+        <form id="add-task-card" class="add-task-card">
             <div class="title-positioning">
-                <h1>Add Task</h1>
+                <h1 class="h1">Add Task</h1>
             </div>
-            <div class="close-btn small-icon-div hide"> <!--Must give the hide tag in foul screen-->
+            <div id="close-popup" onclick="closeAddTask()" class="close-btn small-icon-div hide"> <!--Must give the hide tag in full screen-->
                 <img class="small-icon" src="/img/Close.png">
             </div>
             <div class="three-input-container flex-column">
@@ -97,7 +97,7 @@
                     <span class="required-text"><span class="asterisc-color">*</span>This field is required</span>
                 </div>
                 <div class="two-buttons-position flex-row">
-                    <button class="cancel-btn flex-row gap-four btn-styling medium-font">Cancel<img
+                    <button onclick="closeAddTask()" class="cancel-btn flex-row gap-four btn-styling medium-font">Cancel<img
                             src="/img/Close.png"></button>
                     <button class="create-btn flex-row gap-four btn-styling medium-font">Create Task<img
                             src="/img/check.png"></button>

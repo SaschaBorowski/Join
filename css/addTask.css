@@ -17,9 +17,11 @@ body {
 
 .add-task-popup-position {
     height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .add-task-main-position {
@@ -53,10 +55,11 @@ body {
     cursor: pointer;
 }
 
-h1 {
+.h1 {
     font-weight: 700;
     font-size: 61px;
     line-height: 73px;
+    margin: 0 !important;
 }
 
 .flex-column {

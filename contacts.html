@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <!-- <link rel="stylesheet" href="./css/test.css"> -->
     <script src="./JS/includehtml.js"></script>
+    <script src="JS/addTask/styling.js"></script>
 </head>
 
 
-<body onload="includeHTML()">
+<body onload="includeHTML()" class="position-relative">
     <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
@@ -20,7 +21,7 @@
     <div class="display-flex">
         <div class="contact-container" id="contact-container">
             <div class="contact-list">
-                <button class="btn new-contact">Add new contact<img src="./img/person_add.png"></button>
+                <button class="btn new-contact" onclick="addContact()">Add new contact<img src="./img/person_add.png"></button>
                 <div class="contact-list-items" id="contactContainer">
                     <span class="register-letter">A</span>
                     <div>
@@ -49,5 +50,6 @@
             </div>
         </div>
     </div>
+    <div w3-include-html="addContact.html" class="add-contact-popup"></div>
 </body>
 </html>

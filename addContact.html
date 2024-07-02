@@ -8,11 +8,12 @@
     <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
     <link rel="stylesheet" href="/css/addContact.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <script src="/JS/styling.js"></script>
 </head>
 
 <body>
     <div class="contact-card-placement flex-center">
-        <form class="contact-card">
+        <form class="new-contact-card">
             <section class="text-logo-area flex-center">
                 <div class="logo-div">
                     <img class="logo" src="/img/Join_Logo.png">
@@ -24,33 +25,37 @@
                 </div>
             </section>
 
-                <div class="close-btn" tabindex="1">
-                    <img class="close-btn-dark" src="/img/Close.png">
-                    <img class="close-btn-light" src="/img/Close-white.png">
-                </div>
+            <div class="close-btn" tabindex="1" onclick="closeAddContact()">
+                <img class="close-btn-dark" src="/img/Close.png">
+                <img class="close-btn-light" src="/img/Close-white.png">
+            </div>
 
-                <div class="profile-img flex-center">
-                    <img class="white-profile" src="/img/addContact-profile-white.png">
-                </div>
+            <div class="profile-img flex-center">
+                <img class="white-profile" src="/img/addContact-profile-white.png">
+            </div>
 
-                <div class="contact-input-field">
-                    <div class="contact-input ">
-                        <input type="text" class="input font-fourhundrdred-twentyfour" placeholder="Name" required></input>
-                        <img class="input-img" src="/img/addContact-profile-gray.png">
-                    </div>
-                    <div class="contact-input">
-                        <input type="email" class="input font-fourhundrdred-twentyfour" placeholder="Email" required></input>
-                        <img class="input-img" src="/img/addContact-email.png">
-                    </div>
-                    <div class="contact-input">
-                        <input type="number" class="input font-fourhundrdred-twentyfour" placeholder="Phone" required></input>
-                        <img class="input-img" src="/img/addContact-phone.png">
-                    </div>
+            <div class="contact-input-field">
+                <div class="contact-input ">
+                    <input type="text" class="input font-fourhundrdred-twentyfour" placeholder="Name" required></input>
+                    <img class="input-img" src="/img/addContact-profile-gray.png">
                 </div>
-                <div class="buttons-area">
-                    <button class="cancel-btn font-fourhundrdred-twentyfour flex-center">Cancel <span class="cross-icon">&#10006;</span></button>
-                    <button class="create-contact-btn flex-center">Create contact <span class="check"><img class="check-img" src="/img/check.png"></span></button>
+                <div class="contact-input">
+                    <input type="email" class="input font-fourhundrdred-twentyfour" placeholder="Email"
+                        required></input>
+                    <img class="input-img" src="/img/addContact-email.png">
                 </div>
+                <div class="contact-input">
+                    <input type="number" class="input font-fourhundrdred-twentyfour" placeholder="Phone"
+                        required></input>
+                    <img class="input-img" src="/img/addContact-phone.png">
+                </div>
+            </div>
+            <div class="buttons-area">
+                <button onclick="closeAddContact()" class="cancel-btn font-fourhundrdred-twentyfour flex-center">Cancel <span
+                        class="cross-icon">&#10006;</span></button>
+                <button class="create-contact-btn flex-center">Create contact <span class="check"><img class="check-img"
+                            src="/img/check.png"></span></button>
+            </div>
         </form>
     </div>
 </body>

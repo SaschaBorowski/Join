@@ -189,15 +189,15 @@ function deleteSubtask(element) {
 function swapToEdit(listItem) {
   let edit = listItem.querySelector("[id^=editContainer]");
   let editing = listItem.querySelector("[id^=addRemoveContainerEdit]");
-  edit.classList.add('hide');
-  editing.classList.remove('hide');
+  edit.classList.add("hide");
+  editing.classList.remove("hide");
 }
 
 function swapToNormal(listItem) {
   let edit = listItem.querySelector("[id^=editContainer]");
   let editing = listItem.querySelector("[id^=addRemoveContainerEdit]");
-  edit.classList.remove('hide');
-  editing.classList.add('hide');
+  edit.classList.remove("hide");
+  editing.classList.add("hide");
 }
 
 function approveEdit(element) {
@@ -205,7 +205,9 @@ function approveEdit(element) {
   let inputElement = listItem.querySelector("input");
   let newSubtaskText = inputElement.value.trim();
 
-  let oldSubtaskText = subtasks.find((subtask) => subtask === inputElement.defaultValue);
+  let oldSubtaskText = subtasks.find(
+    (subtask) => subtask === inputElement.defaultValue
+  );
   let index = subtasks.indexOf(oldSubtaskText);
   if (index !== -1) {
     subtasks[index] = newSubtaskText;
@@ -214,4 +216,58 @@ function approveEdit(element) {
   inputElement.outerHTML = `<span class="subtask-text">${newSubtaskText}</span>`;
 
   swapToNormal(listItem);
+}
+
+/*the following two functions must be used for the contacs.html and addContacts.html */
+
+function addContact() {
+  let card = document.querySelector(".add-contact-popup");
+  card.style.display = "block";
+  setTimeout(() => {
+    card.style.left = "50%";
+  }, 5);
+}
+
+function closeAddContact() {
+  let card = document.querySelector(".add-contact-popup");
+  card.style.left = "150%";
+  setTimeout(() => {
+    card.style.display = "none";
+  }, 225);
+}
+
+/*the following functions must be used for the board.html and addTasks.html */
+
+function openAddTask() {
+  swapToPopup();
+
+  let card = document.querySelector(".add-task-popup");
+  card.style.display = "block";
+  setTimeout(() => {
+    card.style.left = "50%";
+  }, 5);
+}
+
+function closeAddTask() {
+  let addTask = document.getElementById("add-task-position");
+  if (addTask.classList.contains("add-task-popup-position")) {
+    closeAddTaskPopup();
+  }else{
+    location.reload();
+  }
+}
+
+function closeAddTaskPopup() {
+  let card = document.querySelector(".add-task-popup");
+  card.style.left = "150%";
+  setTimeout(() => {
+    card.style.display = "none";
+  }, 225);
+}
+
+function swapToPopup() {
+  document.getElementById("add-task-position").className =
+    "add-task-popup-position";
+  document.getElementById("add-task-card").style.backgroundColor = "white";
+  document.getElementById("close-popup").classList.remove("hide");
 }
