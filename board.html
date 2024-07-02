@@ -7,17 +7,19 @@
     <title>Board</title>
     <link rel="icon" type="image/x-icon" href="/img/Join_Logo.png">
     <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/userStory.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <script src="/js/includehtml.js"></script>
+    <script src="/JS/board/userStory.js"></script>
 </head>
 
-<body onload="includeHTML()">
+<body class="boardBodyContainer" onload="includeHTML()">
     <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
 
     <div class="headlineInputButtonContainer">
-        <h1>Board</h1>
+        <h1>Add Task</h1>
         <div class="inputButtonContainer">
             <div class="inputContainer">
                 <input type="text" placeholder="Find task">
@@ -28,7 +30,7 @@
                     <img src="./img/board/search.png" alt="Search">
                 </div>
             </div>
-            <button class="btn">Add task <img src="./img/board/add.png" alt="Add"></button>
+            <button class="btn">Board<img src="./img/board/add.png" alt="Add"></button>
         </div>
     </div>
     <div class="progressBar">
@@ -37,7 +39,7 @@
             <div class="progressbarColumnHeadline">
                 To do <div class="backgroundImage"></div>
             </div>
-            <div class="taskColumn">
+            <div onclick="openUserStory()" class="taskColumn">
                 <div class="taskColumnContainer">
                     <div class="taskType">User Story</div>
                     <div class="taskTitel">Kochwelt Page & Recipe Recommender</div>
@@ -105,6 +107,9 @@
             <div class="taskColumn">
                 Space
             </div>
+        </div>
+        <div id="userStoryWindow">
+            
         </div>
     </div>
 </body>

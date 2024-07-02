@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Story</title>
-    <link rel="stylesheet" href="./css/userStory.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-</head>
 
-<body>
+function openUserStory() {
+    let userStoryContainer = document.getElementById('userStoryWindow');
+    userStoryContainer.innerHTML += `
     <div class="userStoryOutsideContainer">
         <div class="userStoryContainer">
             <div class="userStoryContainerInside">
@@ -21,7 +14,7 @@
                         <img src="./img/userStory/close.png" alt="Close">
                     </div>
                 </div>
-                <div class="userStoryHeadlineContainer">
+                <div>
                     <h1>
                         Kochwelt Page & Recipe Recommender
                     </h1>
@@ -97,6 +90,5 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+    `
+}
