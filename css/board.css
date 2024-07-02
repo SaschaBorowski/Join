@@ -7,7 +7,6 @@
 }
 
 .boardBodyContainer {
-    /* margin-left: 328px; */
     background-color: #F6F7F8;
     position: relative;
 }
@@ -281,3 +280,63 @@ input[type=text]:focus {
     transition: all 225ms ease-in-out;
     z-index: 10;
   }
+
+.userStoryWindow {
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.flying-element {
+    position: absolute;
+    animation: fly-in 0.1s forwards; /* Animation anwenden */
+}
+
+@keyframes fly-in {
+    from {
+        right: -3000px; /* Startposition außerhalb des Bildschirms */
+    }
+    to {
+        right: 0; /* Endposition innerhalb des Bildschirms */
+
+    }
+}
+@keyframes fly-out {
+    from {
+        right: 0px; /* Startposition innerhalb des Bildschirms */
+
+    }
+    to {
+        right: -3000px; /* Endposition außerhalb des Bildschirms */
+    }
+}
+
+.overlay {
+    position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            animation: fade-in 0.25s forwards;
+            z-index: 99;
+}
+
+@keyframes fade-in {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes fade-out {
+    from {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

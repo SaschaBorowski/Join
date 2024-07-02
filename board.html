@@ -10,16 +10,19 @@
     <link rel="stylesheet" href="./css/userStory.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <script src="/js/includehtml.js"></script>
+
     <script src="/JS/board/userStory.js"></script>
+    <script src="/JS/board/html_templates.js"></script>
+    <script src="/JS/addTask/styling.js"></script>
 </head>
 
-<body class="boardBodyContainer" onload="includeHTML()">
+<body id="boardBodyContainer" class="boardBodyContainer" onload="includeHTML()">
     <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
 
     <div class="headlineInputButtonContainer">
-        <h1>Add Task</h1>
+        <h1>Board</h1>
         <div class="inputButtonContainer">
             <div class="inputContainer">
                 <input type="text" placeholder="Find task">
@@ -67,7 +70,7 @@
             <div class="progressbarColumnHeadline">
                 In progress <div class="backgroundImage"></div>
             </div>
-            <div class="taskColumn">
+            <div onclick="openUserStory()" class="taskColumn">
                 <div class="taskColumnContainer">
                     <div class="taskType">Technical Task</div>
                     <div class="taskTitel">
@@ -108,9 +111,8 @@
                 Space
             </div>
         </div>
-        <div id="userStoryWindow">
-            
-        </div>
+        <div class="userStoryWindow" id="userStoryWindow"></div>
+        <div id="overlay"></div>
     </div>
     <div class="add-task-popup" w3-include-html="./addTask.html"></div>
 </body>
