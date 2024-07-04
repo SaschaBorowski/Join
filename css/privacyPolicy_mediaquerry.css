@@ -1,0 +1,30 @@
+@media(max-width: 1050px) {
+    .privacyMainContainer {
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 135px;
+        padding-bottom: 172px;
+        padding-right: 12px;
+    }
+}
+
+@media(max-width: 650px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 450px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
