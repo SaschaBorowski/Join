@@ -187,6 +187,9 @@ function userStoryEditHtmlTemplate() {
                         </div>
                     </table>
                 </div>
+                <div class="userStoryEditOkButtonContainer">
+                    <button class="userStoryEditOkButton" onclick="openAddTask()">Ok <img src="./img/userStoryEdit/ok.png" alt="Add"></button>
+                </div>
             </form>
         </div>
     </div>
