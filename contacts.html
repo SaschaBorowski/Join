@@ -13,7 +13,7 @@
 </head>
 
 
-<body onload="includeHTML()" class="position-relative">
+<body onload="includeHTML()" id="contactsBody">
     <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
@@ -50,6 +50,7 @@
             </div>
         </div>
     </div>
+    <div id="overlay"></div>
     <div w3-include-html="addContact.html" class="add-contact-popup"></div>
 </body>
 </html>
