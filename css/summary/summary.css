@@ -1,7 +1,6 @@
 * {
     margin: 0;
     font-family: 'Inter';
-    
 }
 
 body {
@@ -12,7 +11,7 @@ body {
 h1 {
     font-size: 61px;
     font-weight: bold;
-  }
+}
 
 .main-container-summary {
     display: flex;
@@ -214,4 +213,71 @@ h1 {
 
 .summary-card:hover .summary-icons {
     filter: invert(1) grayscale(1) brightness(0.8); 
+}
+
+.greeting-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.greet-text {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.fullscreen-greeting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7f8; 
+    color: black; 
+    font-size: 2em;
+    z-index: 1000;
+    opacity: 0;
+    overflow: hidden; 
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.animationSummary {
+    animation: opacity 1s ease-in-out forwards;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+        display: flex;
+    }
+    100% {
+        opacity: 1;
+        display: flex;
+    }
+}
+
+.animationSummaryShine {
+    transition: opacity 1s;
+    animation: shine 1s ease-in-out forwards;
+    display: flex !important; 
+}
+
+@media screen and (max-width: 1050px) {
+    .greeting-container {
+        display: none;
+    }
 }

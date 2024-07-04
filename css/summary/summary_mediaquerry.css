@@ -7,6 +7,17 @@
   .seperator-mobile {
     display: none;
   }
+
+  @media (max-width: 1200px) {
+    .greet-text {
+        font-size: 26px;
+        white-space: nowrap;
+    }
+
+    .greeting-container {
+        padding-right: 32px;
+    }
+}
   
   @media (max-width: 1050px) {
     .sidebar-header {
