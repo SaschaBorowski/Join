@@ -1,0 +1,46 @@
+@media(max-width: 1050px) {
+    .mainContainer {
+        margin-left: 12px;
+        padding-bottom: 100px;
+        padding-right: 12px;
+    }
+
+    .HeadlineAndArrowLeft img {
+        padding-left: 24px;
+    }
+
+}
+
+@media(max-width: 650px) {
+    .HeadlineAndArrowLeft h1 {
+        font-size: 48px;
+        white-space: nowrap;
+    }
+
+    .legalNoticeImprintContainer h2 {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 450px) {
+    .HeadlineAndArrowLeft h1 {
+        font-size: 38px;
+        white-space: nowrap;
+    }
+
+    .legalNoticeImprintContainer h2 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 380px) {
+    .HeadlineAndArrowLeft h1 {
+        font-size: 28px;
+        white-space: nowrap;
+        padding-left: 8px;
+    }
+
+    .legalNoticeImprintContainer h2 {
+        font-size: 18px;
+    }
+}
