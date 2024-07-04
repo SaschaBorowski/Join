@@ -1,6 +1,6 @@
 function userStoryHtmlTemplate() {
     return `
-    <div class="userStoryOutsideContainer flying-element">
+    <div id="userStoryOutsideContainer" class="userStoryOutsideContainer flying-element">
         <div class="userStoryContainer">
             <div class="userStoryContainerInside">
                 <div class="userStoryHeadlineAndCloseButtonContainer">
