@@ -5,7 +5,7 @@ function subTasksHoverEffect() {
         const hoverListedItemImage = document.querySelector(`.subtaskListedImage${i}`)
         hoverListedItemImage.style.display = "none";
     hoverListedItem.addEventListener("mouseenter", function () {
-        hoverListedItem.style.backgroundColor = "#D1D1D1"; // gray
+        hoverListedItem.style.backgroundColor = "#2c2c2c17"; // gray
         hoverListedItemImage.style.display = "block";
     });
     hoverListedItem.addEventListener("mouseleave", function () {
@@ -13,7 +13,6 @@ function subTasksHoverEffect() {
         hoverListedItemImage.style.display = "none";
     })
 };};
-
 
 function setPriority(priority) {
   let priorities = {
