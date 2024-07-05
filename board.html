@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="./css/userStory.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/userStory_edit.css">
-    
+
     <script src="/js/includehtml.js"></script>
 
     <!-- <script src="./JS/userStoryEdit/userStoryEditStyle.js"></script> -->
+    <script src="/JS/board/board.js"></script>
     <script src="/JS/board/userStory.js"></script>
     <script src="/JS/board/html_templates.js"></script>
     <script src="/JS/addTask/styling.js"></script>
 </head>
 
-<body id="boardBodyContainer" class="boardBodyContainer" onload="includeHTML()">
+<body id="boardBodyContainer" class="boardBodyContainer" onload="includeHTML(), renderTickets()">
     <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
@@ -39,79 +40,65 @@
             <button class="btn" onclick="openAddTask()">Add task <img src="./img/board/add.png" alt="Add"></button>
         </div>
     </div>
-    <div class="progressBar">
+    <div id="progressTitelColumn" class="progressBar">
 
         <div class="column1Container marginRight">
             <div class="progressbarColumnHeadline">
                 To do <div class="backgroundImage"></div>
             </div>
-            <div onclick="openUserStory()" class="taskColumn">
-                <div class="taskColumnContainer">
-                    <div class="taskType">User Story</div>
-                    <div class="taskTitel">Kochwelt Page & Recipe Recommender</div>
-                    <div class="taskDescription">Build start page with recipe recommendation Build start page with
-                        recipe recommendation</div>
-
-                    <div class="taskSubtaskBarContainer">
-                        <div class="taskSubtaskBar">
-                            <div class="taskSubtaskBarFilledBar"></div>
-                        </div>
-                        <span>1/2 Subtask</span>
-                    </div>
-                    <div class="taskContactsPrioContainer">
-                        <div class="taskContactsContainer">
-                            <div class="taskContact">am</div>
-                            <div class="taskContact">em</div>
-                            <div class="taskContact">mb</div>
-                        </div>
-                        <div><img src="./img/board/prio_high.png" alt="Important"></div>
-                    </div>
-                </div>
+            <div id="column1">
+                
             </div>
         </div>
         <div class="column1Container marginRight">
             <div class="progressbarColumnHeadline">
                 In progress <div class="backgroundImage"></div>
             </div>
-            <div onclick="openUserStory()" class="taskColumn">
-                <div class="taskColumnContainer">
-                    <div class="taskType">Technical Task</div>
-                    <div class="taskTitel">
-                        <p>HTML Base Template Creation</p>
-                    </div>
-                    <div class="taskDescription"></div>
+            <div id="column2">
+                <!-- <div draggable="true" ondragstart="startDragging()" onclick="openUserStory()" class="taskColumn">
+                    <div class="taskColumnContainer">
+                        <div class="taskType">Technical Task</div>
+                        <div class="taskTitel">
+                            <p>HTML Base Template Creation</p>
+                        </div>
+                        <div class="taskDescription"></div>
 
-                    <div class="taskSubtaskBarContainer">
-                        <div class="taskSubtaskBar">
-                            <div class="taskSubtaskBarFilledBar"></div>
+                        <div class="taskSubtaskBarContainer">
+                            <div class="taskSubtaskBar">
+                                <div class="taskSubtaskBarFilledBar"></div>
+                            </div>
+                            <span>1/2 Subtask</span>
                         </div>
-                        <span>1/2 Subtask</span>
-                    </div>
-                    <div class="taskContactsPrioContainer">
-                        <div class="taskContactsContainer">
-                            <div class="taskContact">as</div>
-                            <div class="taskContact">de</div>
-                            <div class="taskContact">ef</div>
+                        <div class="taskContactsPrioContainer">
+                            <div class="taskContactsContainer">
+                                <div class="taskContact">as</div>
+                                <div class="taskContact">de</div>
+                                <div class="taskContact">ef</div>
+                            </div>
+                            <div><img src="./img/board/prio_medium.png" alt="Important"></div>
                         </div>
-                        <div><img src="./img/board/prio_medium.png" alt="Important"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="column1Container marginRight">
             <div class="progressbarColumnHeadline">
                 Await feedback <div class="backgroundImage"></div>
             </div>
-            <div class="taskColumn">
-                Space
+            <div id="column3">
+                <div class="taskColumn">
+                    Space
+                </div>
             </div>
         </div>
         <div class="column1Container">
             <div class="progressbarColumnHeadline">
-                Done <div class="backgroundImage"></div>
+                Done
             </div>
-            <div class="taskColumn">
-                Space
+            <div id="column4">
+                <div class="taskColumn">
+                    Space
+                </div>
             </div>
         </div>
         <div class="userStoryWindow" id="userStoryWindow"></div>

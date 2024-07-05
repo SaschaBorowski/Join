@@ -229,7 +229,7 @@ input[type=text]:focus {
 .taskSubtaskBarFilledBar {
     background-color: green;
     /* Need to be changed by Javascript */
-    width: 50%;
+    
     height: 8px;
     border-radius: 8px;
 }

@@ -48,7 +48,7 @@ function closeUserStoryEdit() {
 
 function loadUserStoryEditStyleFile() {
     var script = document.createElement('script');
-    script.src = '/JS/userStoryEdit/userStoryEditStyle.js'; // Pfad zu deiner JavaScript-Datei
+    script.src = '/JS/board/userStoryEditStyle.js'; // Pfad zu deiner JavaScript-Datei
     script.type = 'text/javascript';
     document.head.appendChild(script);
 }
