@@ -27,6 +27,7 @@ function closeUserStory() {
 function openUserStoryEdit() {
     let userStoryContainer = document.getElementById('userStoryWindow');
     userStoryContainer.innerHTML = userStoryEditHtmlTemplate();
+    loadUserStoryEditStyleFile();
 }
 
 function closeUserStoryEdit() {
@@ -44,3 +45,20 @@ function closeUserStoryEdit() {
         overlay.classList.remove("overlay");
     }, 200);
 }
+
+function loadUserStoryEditStyleFile() {
+    var script = document.createElement('script');
+    script.src = '/JS/userStoryEdit/userStoryEditStyle.js'; // Pfad zu deiner JavaScript-Datei
+    script.type = 'text/javascript';
+    document.head.appendChild(script);
+}
+
+// function unloadUserStoryEditStyleFile() {
+//     var script = document.getElementById('externalScript');
+//     if (script) {
+//         script.parentNode.removeChild(script);
+//         console.log('Script entladen');
+//     } else {
+//         console.log('Script nicht gefunden');
+//     }
+// }
