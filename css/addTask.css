@@ -5,6 +5,7 @@
 
 body {
     font-family: Inter;
+    height: 100vh;
 }
 
 .hide {
@@ -437,4 +438,8 @@ body {
 .confirmation-img {
     width: 30px;
     height: 30px;
+}
+
+.show-on-top{
+    z-index: 99;
 }

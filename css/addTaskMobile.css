@@ -1,9 +1,11 @@
-@media(max-width:1370px) {
+@media(max-width:1360px) {
     .add-task-main-position {
-        position: inherit;
+        position: absolute;
         width: 428px;
         height: 1250px;
         border-radius: 0;
+        left: 232px;
+        bottom: 0;
     }
 
     .add-task-card {
@@ -118,9 +120,11 @@
     }
 
     .btn-required-text {
-        position: sticky;
-        bottom: 80px;
+        position: fixed;
+        bottom: 0;
+        top: initial;
         width: 396px;
+        height: 56px;
         padding: 16px;
         background-color: #F6F7F8;
     }
@@ -157,13 +161,32 @@
     }
 }
 
-@media(max-width:450px) {
+@media(max-width:1050px){
+    .btn-required-text{
+        position: inherit;
+    }
+}
+
+@media(max-width:850px){
+    .add-task-main-position {
+        left: 0;
+    }
+
+    .btn-required-text {
+        position: fixed;
+        bottom: 112px;
+        height: auto;
+    }
+
+}
+
+@media(max-width:500px) {
     body{
         overflow-x: hidden;
     }
 
     .add-task-main-position {
-        position: inherit;
+        left: 0;
         width: 310px;
         border-radius: 0;
     }
@@ -270,7 +293,10 @@
     }
 
     .btn-required-text {
+        position: fixed;
+        bottom: 112px;
         width: 290px;
+        height: auto;
         padding: 16px 0;
         flex-direction: column;
     }
