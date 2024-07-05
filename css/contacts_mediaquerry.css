@@ -1,0 +1,43 @@
+@media(max-width: 1200px) {
+    .contacts-headline {
+        padding-left: 25px;
+    }
+
+     .headline-close h1 {
+        font-size: 35px !important;
+    }
+
+    h2 {
+        font-size: 15px !important;
+    }
+
+    .parting-line {
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .display-flex {
+        margin-left: 0;
+    }
+
+    .right-content {
+        display: none;
+    }
+}
+
+@media(max-width: 420px) {
+    .new-contact {
+        width: 290px;
+        margin: 22px 52px 21px 40px;
+    }
+}
+
+@media(max-width: 350px) {
+    .new-contact {
+        width: 256px;
+        margin: 22px 52px 21px 40px;
+    }
+}
