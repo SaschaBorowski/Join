@@ -26,6 +26,10 @@
     .right-content {
         display: none;
     }
+
+    .contact-container {
+        box-shadow: none;
+    }
 }
 
 @media(max-width: 420px) {
