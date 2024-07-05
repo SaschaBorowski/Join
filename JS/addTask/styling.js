@@ -22,6 +22,7 @@ function setPriority(priority) {
   for (let key in priorities) {
     priorities[key].style.backgroundColor =
       key === priority ? getColor(priority) : "";
+      priorities[key].style.color = key === priority ? "#FFFFFF" : "";
   }
 }
 
