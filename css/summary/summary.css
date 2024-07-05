@@ -228,6 +228,11 @@ h1 {
     font-weight: 500;
 }
 
+#fullscreenGreeting {
+    font-size: 32px;
+    font-weight: 500;
+}
+
 .fullscreen-greeting {
     position: fixed;
     top: 0;
