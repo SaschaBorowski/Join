@@ -2,7 +2,7 @@ let tickets = [
     // 0
     {
         "id": 0,
-        "taskType": 'User Story',
+        "taskType": 'toDo0',
         "taskTitel": 'Kochwelt Page & Recipe Recommender',
         "taskDescription": 'Build start page with recipe recommendation Build start page with recipe recommendation',
         "taskBar": 50,
@@ -10,12 +10,12 @@ let tickets = [
         "taskContacts": ["Emmanuel Mauer", "Marcel Bauer", "Anton Mayer"],
         "taskPrioImage": './img/board/prio_high.png',
         "taskPrioAlt": 'High',
-        "taskStatus": 'To do',
+        "taskStatus": 'toDo',
     },
     //1
     {
         "id": 1,
-        "taskType": 'Technical Task',
+        "taskType": 'InProgress1',
         "taskTitel": 'HTML Base Template Creation',
         "taskDescription": '',
         "taskBar": 100,
@@ -23,9 +23,37 @@ let tickets = [
         "taskContacts": ["Anja Schulz", "David Eisenberg", "Eva Fischer"],
         "taskPrioImage": './img/board/prio_medium.png',
         "taskPrioAlt": 'Medium',
-        "taskStatus": 'In progress'
-    }
+        "taskStatus": 'inProgress'
+    },
+    //2
+    {
+        "id": 2,
+        "taskType": 'awaitFeedback2',
+        "taskTitel": 'HTML Base Template Creation',
+        "taskDescription": '',
+        "taskBar": 100,
+        "taskSubtaskAmount": 2,
+        "taskContacts": ["Anja Schulz", "David Eisenberg", "Eva Fischer"],
+        "taskPrioImage": './img/board/prio_medium.png',
+        "taskPrioAlt": 'Medium',
+        "taskStatus": 'awaitFeedback'
+    },
+    //3
+    {
+        "id": 3,
+        "taskType": 'done3',
+        "taskTitel": 'HTML Base Template Creation',
+        "taskDescription": '',
+        "taskBar": 100,
+        "taskSubtaskAmount": 2,
+        "taskContacts": ["Anja Schulz", "David Eisenberg", "Eva Fischer"],
+        "taskPrioImage": './img/board/prio_medium.png',
+        "taskPrioAlt": 'Medium',
+        "taskStatus": 'done'
+    },
 ];
+
+let currentDraggedElement;
 
 function formatContacts(contacts) {
     return contacts.map(contact => {
@@ -34,34 +62,80 @@ function formatContacts(contacts) {
     }).join('');
 }
 
-function renderTickets() {
-    let userTicketColumn1 = document.getElementById('column1');
+function renderTicketsToDo() {
+    let userTicketColumnToDo = document.getElementById('toDo');
+    userTicketColumnToDo.innerHTML = ``;
     for (let i = 0; i < tickets.length; i++) {
         const ticket = tickets[i];
         const formattedContacts = formatContacts(ticket.taskContacts);
-
-        userTicketColumn1.innerHTML += `
-            <div id="${ticket.id}" draggable="true" ondragstart="startDragging()" onclick="openUserStory()" class="taskColumn">
-                <div class="taskColumnContainer">
-                    <div class="taskType">${ticket.taskType}</div>
-                    <div class="taskTitel">${ticket.taskTitel}</div>
-                    <div class="taskDescription">${ticket.taskDescription}</div>
-
-                    <div class="taskSubtaskBarContainer">
-                        <div class="taskSubtaskBar">
-                            <div style="width:${ticket.taskBar}%" class="taskSubtaskBarFilledBar"></div>
-                        </div>
-                        <span>${ticket.taskSubtaskAmount}/2 Subtask</span>
-                    </div>
-                    <div class="taskContactsPrioContainer">
-                        <div class="taskContactsContainer">
-                            ${formattedContacts}
-                        </div>
-                        <div><img src="${ticket.taskPrioImage}" alt="${ticket.taskPrioAlt}"></div>
-                    </div>
-                </div>
-            </div>
-        `;
+        if (ticket.taskStatus === 'toDo') {
+            userTicketColumnToDo.innerHTML +=
+            ticketTemplate(ticket, formattedContacts);
+        }
     }
 }
 
+function renderTicketsInProgress() {
+    let userTicketColumnInProgress = document.getElementById('inProgress');
+    userTicketColumnInProgress.innerHTML = ``;
+    for (let i = 0; i < tickets.length; i++) {
+        const ticket = tickets[i];
+        const formattedContacts = formatContacts(ticket.taskContacts);
+        if (ticket.taskStatus === 'inProgress') {
+            userTicketColumnInProgress.innerHTML +=
+            ticketTemplate(ticket, formattedContacts);
+        }
+    }
+}
+
+function renderTicketsAwaitFeedback() {
+    let userTicketColumnAwaitFeedback = document.getElementById('awaitFeedback');
+    userTicketColumnAwaitFeedback.innerHTML = ``;
+    for (let i = 0; i < tickets.length; i++) {
+        const ticket = tickets[i];
+        const formattedContacts = formatContacts(ticket.taskContacts);
+        if (ticket.taskStatus === 'awaitFeedback') {
+            userTicketColumnAwaitFeedback.innerHTML +=
+            ticketTemplate(ticket, formattedContacts);
+        }
+    }
+}
+
+function renderTicketsDone() {
+    let userTicketColumnDone = document.getElementById('done');
+    userTicketColumnDone.innerHTML = ``;
+    for (let i = 0; i < tickets.length; i++) {
+        const ticket = tickets[i];
+        const formattedContacts = formatContacts(ticket.taskContacts);
+        if (ticket.taskStatus === 'done') {
+            userTicketColumnDone.innerHTML +=
+            ticketTemplate(ticket, formattedContacts);
+        }
+    }
+}
+
+
+
+function loadTickets() {
+    renderTicketsToDo();
+    renderTicketsInProgress();
+    renderTicketsAwaitFeedback();
+    renderTicketsDone();
+}
+
+
+
+
+// DRAG AND DROP
+function startDragging(id) {
+    currentDraggedElement = id;
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function moveTo(taskStatus) {
+    tickets[currentDraggedElement]['taskStatus'] = taskStatus;
+    loadTickets();
+}

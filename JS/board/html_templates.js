@@ -196,3 +196,29 @@ function userStoryEditHtmlTemplate() {
     </div>
     `
 }
+
+function ticketTemplate(ticket, formattedContacts) {
+    return `
+        <div id="${ticket.id}" draggable="true" ondragstart="startDragging(${ticket.id})" onclick="openUserStory()" class="taskColumn">
+            <div class="taskColumnContainer">
+                <div class="taskType">${ticket.taskType}</div>
+                    <div class="taskTitel">${ticket.taskTitel}</div>
+                    <div class="taskDescription">${ticket.taskDescription}</div>
+                        <div class="taskSubtaskBarContainer">
+                            <div class="taskSubtaskBar">
+                                <div style="width:${ticket.taskBar}%" class="taskSubtaskBarFilledBar"></div>
+                            </div>
+                                <span>${ticket.taskSubtaskAmount}/2 Subtask</span>
+                            </div>
+                            <div class="taskContactsPrioContainer">
+                                <div class="taskContactsContainer">
+                                ${formattedContacts}
+                            </div>
+                            <div>
+                                <img src="${ticket.taskPrioImage}" alt="${ticket.taskPrioAlt}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    `
+}

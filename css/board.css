@@ -172,6 +172,12 @@ input[type=text]:focus {
     width: 220px;
 }
 
+.columnContainer {
+    background-color: antiquewhite;
+    height: 60vh;
+    width: 252px;
+}
+
 .taskType {
     display: flex;
     align-items: center;

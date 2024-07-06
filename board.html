@@ -20,7 +20,7 @@
     <script src="/JS/addTask/styling.js"></script>
 </head>
 
-<body id="boardBodyContainer" class="boardBodyContainer" onload="includeHTML(), renderTickets()">
+<body id="boardBodyContainer" class="boardBodyContainer" onload="includeHTML(), loadTickets()">
     <div class="sidebar-header" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
@@ -46,7 +46,8 @@
             <div class="progressbarColumnHeadline">
                 To do <div class="backgroundImage"></div>
             </div>
-            <div id="column1">
+            <!-- Column1 -->
+            <div class="columnContainer" id="toDo" ondrop="moveTo('toDo')" ondragover="allowDrop(event)">
                 
             </div>
         </div>
@@ -54,51 +55,24 @@
             <div class="progressbarColumnHeadline">
                 In progress <div class="backgroundImage"></div>
             </div>
-            <div id="column2">
-                <!-- <div draggable="true" ondragstart="startDragging()" onclick="openUserStory()" class="taskColumn">
-                    <div class="taskColumnContainer">
-                        <div class="taskType">Technical Task</div>
-                        <div class="taskTitel">
-                            <p>HTML Base Template Creation</p>
-                        </div>
-                        <div class="taskDescription"></div>
-
-                        <div class="taskSubtaskBarContainer">
-                            <div class="taskSubtaskBar">
-                                <div class="taskSubtaskBarFilledBar"></div>
-                            </div>
-                            <span>1/2 Subtask</span>
-                        </div>
-                        <div class="taskContactsPrioContainer">
-                            <div class="taskContactsContainer">
-                                <div class="taskContact">as</div>
-                                <div class="taskContact">de</div>
-                                <div class="taskContact">ef</div>
-                            </div>
-                            <div><img src="./img/board/prio_medium.png" alt="Important"></div>
-                        </div>
-                    </div>
-                </div> -->
+            <!-- Column2 -->
+            <div class="columnContainer" id="inProgress" ondrop="moveTo('inProgress')" ondragover="allowDrop(event)">
             </div>
         </div>
         <div class="column1Container marginRight">
             <div class="progressbarColumnHeadline">
                 Await feedback <div class="backgroundImage"></div>
             </div>
-            <div id="column3">
-                <div class="taskColumn">
-                    Space
-                </div>
+            <!-- Column3 -->
+            <div class="columnContainer" id="awaitFeedback" ondrop="moveTo('awaitFeedback')" ondragover="allowDrop(event)">
             </div>
         </div>
         <div class="column1Container">
             <div class="progressbarColumnHeadline">
                 Done
             </div>
-            <div id="column4">
-                <div class="taskColumn">
-                    Space
-                </div>
+            <!-- Column4 -->
+            <div class="columnContainer" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)">
             </div>
         </div>
         <div class="userStoryWindow" id="userStoryWindow"></div>
