@@ -199,7 +199,7 @@ function userStoryEditHtmlTemplate() {
 
 function ticketTemplate(ticket, formattedContacts) {
     return `
-        <div id="${ticket.id}" draggable="true" ondragstart="startDragging(${ticket.id})" onclick="openUserStory()" class="taskColumn">
+        <div id="${ticket.id}" draggable="true" ondragstart="startDragging(${ticket.id})" onclick="openUserStory()" ondragend="endDragging(${ticket.id});" class="taskColumn task">
             <div class="taskColumnContainer">
                 <div class="taskType">${ticket.taskType}</div>
                     <div class="taskTitel">${ticket.taskTitel}</div>

@@ -70,7 +70,7 @@ function renderTicketsToDo() {
         const formattedContacts = formatContacts(ticket.taskContacts);
         if (ticket.taskStatus === 'toDo') {
             userTicketColumnToDo.innerHTML +=
-            ticketTemplate(ticket, formattedContacts);
+                ticketTemplate(ticket, formattedContacts);
         }
     }
 }
@@ -83,7 +83,7 @@ function renderTicketsInProgress() {
         const formattedContacts = formatContacts(ticket.taskContacts);
         if (ticket.taskStatus === 'inProgress') {
             userTicketColumnInProgress.innerHTML +=
-            ticketTemplate(ticket, formattedContacts);
+                ticketTemplate(ticket, formattedContacts);
         }
     }
 }
@@ -96,7 +96,7 @@ function renderTicketsAwaitFeedback() {
         const formattedContacts = formatContacts(ticket.taskContacts);
         if (ticket.taskStatus === 'awaitFeedback') {
             userTicketColumnAwaitFeedback.innerHTML +=
-            ticketTemplate(ticket, formattedContacts);
+                ticketTemplate(ticket, formattedContacts);
         }
     }
 }
@@ -109,12 +109,10 @@ function renderTicketsDone() {
         const formattedContacts = formatContacts(ticket.taskContacts);
         if (ticket.taskStatus === 'done') {
             userTicketColumnDone.innerHTML +=
-            ticketTemplate(ticket, formattedContacts);
+                ticketTemplate(ticket, formattedContacts);
         }
     }
 }
-
-
 
 function loadTickets() {
     renderTicketsToDo();
@@ -123,12 +121,14 @@ function loadTickets() {
     renderTicketsDone();
 }
 
-
-
-
 // DRAG AND DROP
 function startDragging(id) {
     currentDraggedElement = id;
+    document.getElementById(id).classList.add('dragging');
+    for (let i = 0; i < 4; i++) {
+        document.getElementById(`dragPosition${i}`).classList.add('dragPosition');
+        document.getElementById(`dragPosition${i}`).classList.remove('dragAreaHighlight');
+    }
 }
 
 function allowDrop(ev) {
@@ -138,4 +138,21 @@ function allowDrop(ev) {
 function moveTo(taskStatus) {
     tickets[currentDraggedElement]['taskStatus'] = taskStatus;
     loadTickets();
+}
+
+function endDragging(id) {
+    currentDraggedElement = id;
+    document.getElementById(id).classList.remove('dragging');
+    for (let i = 0; i < 4; i++) {
+        
+    document.getElementById(`dragPosition${i}`).classList.remove('dragPosition');
+}
+}
+
+function highlight(id) {
+    document.getElementById(id).classList.add('dragAreaHighlight');
+}
+
+function removeHighlight(id) {
+    document.getElementById(id).classList.remove('dragAreaHighlight');
 }
