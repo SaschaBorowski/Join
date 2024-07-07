@@ -13,13 +13,13 @@
     <script src="/JS/includehtml.js"></script>
 </head>
 
-<body onload="includeHTML()">
+<body onload="includeHTML(); loadUrl()">
     <div class="sidebar-header show-on-top" w3-include-html="./templates/sidebarHeaderTemplate.html"></div>
     <div class="mobile-header  show-on-top" w3-include-html="./templates/mobileHeader.html"></div>
     <div class="mobile-nav" w3-include-html="./templates/mobileNavbar.html"></div>
 
     <div id="add-task-position" class="add-task-main-position"> <!--Change to add-task-main-position-->
-        <form id="add-task-card" class="add-task-card">
+        <form onsubmit="event.preventDefault(); postTask()" id="add-task-card" class="add-task-card">
             <div class="title-positioning">
                 <h1 class="h1">Add Task</h1>
             </div>
@@ -30,19 +30,19 @@
                 <div class="input-title-container flex-column">
                     <span class="medium-font medium-font-color">Title<span class="asterisc-color">*</span></span>
                     <div class="flex-column gap-four">
-                        <input type="text" required class="simple-input medium-font" placeholder="Enter a title">
+                        <input id="title" type="text" required class="simple-input medium-font" placeholder="Enter a title">
                         <span class="small-font asterisc-color hide">This field is required</span>
                         <!--Must be changed with hide or show css class-->
                     </div>
                 </div>
                 <div class="description-container flex-column">
                     <span class="medium-font medium-font-color">Description</span>
-                    <textarea class="textarea medium-font" placeholder="Enter a Description"></textarea>
+                    <textarea id="description" class="textarea medium-font" placeholder="Enter a Description"></textarea>
                 </div>
                 <div class="assigned-container flex-column">
                     <span class="medium-font medium-font-color">Assigned to</span>
                     <div class="foul-input">
-                        <input type="text" class="half-input medium-font" placeholder="Select contacts to assign">
+                        <input  id="assigned" type="text" class="half-input medium-font" placeholder="Select contacts to assign">
                         <div class="rotating" id="rotate" onclick="showPersons()">
                             <img class="rotating-img " src="/img/drop-down-arrow.png">
                         </div>
@@ -55,7 +55,7 @@
                 <div class="date-input-container flex-column">
                     <span class="medium-font medium-font-color">Due date<span class="asterisc-color">*</span></span>
                     <div class="flex-column  gap-four">
-                        <input type="date" required class="simple-input medium-font">
+                        <input id="date" type="date" required class="simple-input medium-font">
                         <span class="small-font asterisc-color hide">This field is required</span>
                         <!--Must be changed with hide or show css class-->
                     </div>
@@ -70,16 +70,16 @@
                 </div>
                 <div class="assigned-container flex-column">
                     <span class="medium-font medium-font-color">Category<span class="asterisc-color">*</span></span>
-                    <select required class="selection medium-font" name="Category">
+                    <select required class="selection medium-font" id="category" name="Category">
                         <option value="">Select task category</option>
-                        <option value="Technical">Technical Task</option>
-                        <option value="User">User Story</option>
+                        <option value="Technical Task">Technical Task</option>
+                        <option value="User Story">User Story</option>
                     </select>
                 </div>
                 <div class="assigned-container flex-column"> <!--Must add a new container below when Subtask added-->
                     <span class="medium-font medium-font-color">Subtasks</span>
                     <div class="foul-input">
-                        <input type="text" class="subtask-input medium-font" id="subtask" placeholder="Add new subtask">
+                        <input id="subtask" type="text" class="subtask-input medium-font" id="subtask" placeholder="Add new subtask">
                         <div class="add-new-subtask small-icon-div" id="addSubtaskIcon" onclick="addSubtask()">
                             <img class="smaller-icon" src="/img/add-plus-icon.png">
                         </div>

@@ -297,3 +297,60 @@ function showOverflow(){
   let boardBodyContainer = document.querySelector('.boardBodyContainer');
   boardBodyContainer.style.overflow = "";
 }
+
+/*Firebase functions*/
+
+const BASE_URL = "https://join-248-default-rtdb.europe-west1.firebasedatabase.app/";
+
+let tasks = [];
+
+async function loadUrl(path="/tasks"){
+    let response = await fetch(BASE_URL + path + ".json");
+    let responseToJson = await response.json();
+    let tasksKeyArray = Object.keys(responseToJson);
+    for (let i = 0; i < tasksKeyArray.length; i++) {
+      tasks.push(
+        {
+            id :  tasksKeyArray[i],
+            task : responseToJson[tasksKeyArray[i]],
+        }
+
+      )
+      
+    }
+
+    console.log(tasksKeyArray);
+}
+
+async function postData(path = "", data) {
+  let response = await fetch(BASE_URL + path + ".json", {
+      method: "POST",
+      header: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data)
+  });
+  return await response.json();
+}
+
+async function postTask() {
+  let title = document.getElementById('title').value;
+  let description = document.getElementById('description').value;
+  let assigned = document.getElementById('assigned').value;
+  let date = document.getElementById('date').value;
+  let category = document.getElementById('category').value;
+  let subtask = document.getElementById('subtask').value;
+
+  let extractedData = {
+      'title': title,
+      'description': description,
+      'assigned': assigned,
+      'date': date,
+      'category': category,
+      'subtask': subtask
+  };
+
+  await postData("/tasks", extractedData);
+
+  console.log('Form submitted', extractedData);
+}
