@@ -24,11 +24,13 @@ async function loadUrl(path = "") {
   arrayDistributor();
 }
 
+
 function arrayDistributor() {
   firebaseContacts.push(firebaseData[0]);
   firebaseTasks.push(firebaseData[1]);
   firebaseUsers.push(firebaseData[2]);
 }
+
 
 async function postData(path = "", data) {
   let response = await fetch(BASE_URL + path + ".json", {
@@ -41,42 +43,10 @@ async function postData(path = "", data) {
   return await response.json();
 }
 
+
 function getValue(id) {
   return document.getElementById(id).value;
 }
-
-// Originale postTask Funktion von Mario
-// async function postTask() {
-//   let assigned = document.getElementById("assigned").value;
-//   let subtask = subtasks;
-//   let prio = currentPriority;
-
-//   let extractedData = {
-//     title:  getValue("title"),
-//     description: getValue("assigned"),
-//     assigned: assigned,
-//     date: getValue("date"),
-//     category: getValue("category"),
-//     subtask: subtask,
-//     prio: prio,
-//   };
-
-//   await postData("/tasks", extractedData);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Diese Funktion generiert eine random Nummer. Ist für das Drag and Drop System notwendig!
@@ -92,6 +62,7 @@ let numericIdAsNumber = parseInt(numericRandomId, 10);
 
 // Neue AddTask funktion für das board -> muss noch etwas bearbeitet werden
 async function postTask() {
+
   let = taskPrioImageUrl = ''
   if (currentPriority === 'medium') {
     taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
@@ -102,15 +73,11 @@ async function postTask() {
   if (currentPriority === 'urgent') {
     taskPrioImageUrl = './img/urgent-prio-icon-inactive.png';
   }
-
-  // let taskContactsContainer = document.getElementById(numericIdAsNumber);
-
+  
   let taskMoreContacts = `+${assignedPersons.length - 6}`;
   if (taskMoreContacts < 1) {
     taskMoreContacts = "";
   }
-
-
 
   let prio = currentPriority;
   let extractedData = {
@@ -130,7 +97,6 @@ async function postTask() {
   };
 
   await postData("/tasks", extractedData);
-
 };
 
 
