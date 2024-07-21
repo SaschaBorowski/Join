@@ -91,25 +91,52 @@ let numericRandomId = generateNumericRandomId(8); // Generiert eine zufällige I
 let numericIdAsNumber = parseInt(numericRandomId, 10);
 
 // Neue AddTask funktion für das board -> muss noch etwas bearbeitet werden
-// Für die zugewiesene ID muss man sich glaube ich noch was anderes überlegen!
 async function postTask() {
+  let = taskPrioImageUrl = ''
+  if (currentPriority === 'medium') {
+    taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
+  }
+  if (currentPriority === 'low') {
+    taskPrioImageUrl = './img/low-prio-icon-inactive.png';
+  }
+  if (currentPriority === 'urgent') {
+    taskPrioImageUrl = './img/urgent-prio-icon-inactive.png';
+  }
+
+  // let taskContactsContainer = document.getElementById(numericIdAsNumber);
+
+  let taskMoreContacts = `+${assignedPersons.length - 6}`;
+  if (taskMoreContacts < 1) {
+    taskMoreContacts = "";
+  }
+
+
+
   let prio = currentPriority;
   let extractedData = {
     id: numericIdAsNumber,
     taskBar: 0,
     taskContacts: assignedPersons,
+    taskContactsMore: `${taskMoreContacts}`,
     taskDate: getValue("date"),
     taskDescription: getValue("description"),
     taskPrioAlt: prio,
-    taskPrioImage: '',
+    taskPrioImage: taskPrioImageUrl,
     taskStatus: 'toDo',
     taskSubtaskAmount: `${subtasksAt.length}`,
     taskSubtasksDone: '0',
     taskTitle: getValue("title"),
     taskType: getValue("category"),
   };
+
   await postData("/tasks", extractedData);
+
 };
+
+
+
+
+
 
 
 
