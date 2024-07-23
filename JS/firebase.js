@@ -44,6 +44,18 @@ async function postData(path = "", data) {
 }
 
 
+async function patchData(path = "", data) {
+  let response = await fetch(BASE_URL + path + ".json", {
+      method: "PATCH",
+      header: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+  });
+  return await response.json();
+}
+
+
 function getValue(id) {
   return document.getElementById(id).value;
 }
@@ -106,21 +118,6 @@ async function postTask() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function addNewContact() {
   let extractedData = {
     name: getValue("contactNewName"),
@@ -128,8 +125,20 @@ async function addNewContact() {
     phone: getValue("contactNewPhone"),
   };
 
-  await postData("/contacts", extractedData);
+  await patchData(path = "", extractedData);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function addNewUser(event) {
   event.preventDefault();  // Prevent the default form submission behavior
