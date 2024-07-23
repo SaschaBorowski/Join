@@ -75,7 +75,7 @@ async function postTask() {
   }
   
   let taskMoreContacts = `+${assignedPersons.length - 6}`;
-  if (taskMoreContacts < 1) {
+  if (assignedPersons.length < 7) {
     taskMoreContacts = "";
   }
 
