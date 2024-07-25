@@ -72,6 +72,8 @@ function generateNumericRandomId(length) {
 let numericRandomId = generateNumericRandomId(8); // Generiert eine zufällige ID mit 8 Zahlen
 let numericIdAsNumber = parseInt(numericRandomId, 10);
 
+
+
 // Neue AddTask funktion für das board -> muss noch etwas bearbeitet werden
 async function postTask() {
 
@@ -103,6 +105,7 @@ async function postTask() {
     taskPrioImage: taskPrioImageUrl,
     taskStatus: 'toDo',
     taskSubtaskAmount: `${subtasksAt.length}`,
+    taskSubtasks: subtasksAt,
     taskSubtasksDone: '0',
     taskTitle: getValue("title"),
     taskType: getValue("category"),
