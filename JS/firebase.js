@@ -107,6 +107,7 @@ async function postTask() {
     taskSubtaskAmount: `${subtasksAt.length}`,
     taskSubtasks: subtasksAt,
     taskSubtasksDone: '0',
+    taskSubtasksSelected: '',
     taskTitle: getValue("title"),
     taskType: getValue("category"),
   };
