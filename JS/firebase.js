@@ -106,7 +106,7 @@ async function postTask() {
     taskStatus: 'toDo',
     taskSubtaskAmount: `${subtasksAt.length}`,
     taskSubtasks: subtasksAt,
-    taskSubtasksDone: '0',
+    taskSubtasksDone: '',
     taskSubtasksSelected: '',
     taskTitle: getValue("title"),
     taskType: getValue("category"),
