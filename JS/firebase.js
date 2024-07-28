@@ -1,5 +1,6 @@
 /*Firebase functions*/
 let currentPriority = "";
+let currentUser = [];
 
 const BASE_URL =
   "https://join-248-default-rtdb.europe-west1.firebasedatabase.app/";
