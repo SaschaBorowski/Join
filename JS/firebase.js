@@ -76,7 +76,8 @@ let numericIdAsNumber = parseInt(numericRandomId, 10);
 
 
 // Neue AddTask funktion für das board -> muss noch etwas bearbeitet werden
-async function postTask() {
+async function postTask(event) {
+  event.preventDefault();
 
   let = taskPrioImageUrl = ''
   if (currentPriority === 'medium') {
@@ -113,6 +114,7 @@ async function postTask() {
     taskType: getValue("category"),
   };
 
+  await postTaskConfirmation();
   await postData("/tasks", extractedData);
 };
 
