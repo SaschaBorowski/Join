@@ -78,8 +78,13 @@ let numericIdAsNumber = parseInt(numericRandomId, 10);
 // Neue AddTask funktion für das board -> muss noch etwas bearbeitet werden
 async function postTask(event) {
   event.preventDefault();
+  requiredCheck();
+  
+  if (!inputCheck()) {
+    return;
+  }
 
-  let = taskPrioImageUrl = ''
+  let taskPrioImageUrl = '';
   if (currentPriority === 'medium') {
     taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
   }
@@ -92,7 +97,7 @@ async function postTask(event) {
   
   let taskMoreContacts = `+${assignedPersons.length - 6}`;
   if (assignedPersons.length < 7) {
-    taskMoreContacts = "";
+    taskMoreContacts = '';
   }
 
   let prio = currentPriority;
@@ -101,8 +106,8 @@ async function postTask(event) {
     taskBar: 0,
     taskContacts: assignedPersons,
     taskContactsMore: `${taskMoreContacts}`,
-    taskDate: getValue("date"),
-    taskDescription: getValue("description"),
+    taskDate: getValue('date'),
+    taskDescription: getValue('description'),
     taskPrioAlt: prio,
     taskPrioImage: taskPrioImageUrl,
     taskStatus: 'toDo',
@@ -110,13 +115,13 @@ async function postTask(event) {
     taskSubtasks: subtasksAt,
     taskSubtasksDone: '',
     taskSubtasksSelected: '',
-    taskTitle: getValue("title"),
-    taskType: getValue("category"),
+    taskTitle: getValue('title'),
+    taskType: getValue('category'),
   };
 
   await postTaskConfirmation();
   await postData("/tasks", extractedData);
-};
+}
 
 
 
