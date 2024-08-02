@@ -9,9 +9,7 @@ let firebaseData = [];
 let firebaseContacts = [];
 let firebaseTasks = [];
 let firebaseUsers = [];
-/*This function fetches the url with the apropriate path given
-    and pushes them in to the array with the name 'firebaseData' 
-    then everyone can make a function that takes the data from the data array*/
+
 async function loadUrl(path = "") {
   let response = await fetch(BASE_URL + path + ".json");
   let responseToJson = await response.json();
@@ -25,13 +23,11 @@ async function loadUrl(path = "") {
   arrayDistributor();
 }
 
-
 function arrayDistributor() {
   firebaseContacts.push(firebaseData[0]);
   firebaseTasks.push(firebaseData[1]);
   firebaseUsers.push(firebaseData[2]);
 }
-
 
 async function postData(path = "", data) {
   let response = await fetch(BASE_URL + path + ".json", {
@@ -44,7 +40,6 @@ async function postData(path = "", data) {
   return await response.json();
 }
 
-
 async function patchData(path = "", data) {
   let response = await fetch(BASE_URL + path + ".json", {
       method: "PATCH",
@@ -56,13 +51,10 @@ async function patchData(path = "", data) {
   return await response.json();
 }
 
-
 function getValue(id) {
   return document.getElementById(id).value;
 }
 
-
-// Diese Funktion generiert eine random Nummer. Ist für das Drag and Drop System notwendig!
 function generateNumericRandomId(length) {
   let result = '';
   for (let i = 0; i < length; i++) {
@@ -70,20 +62,15 @@ function generateNumericRandomId(length) {
   }
   return result;
 }
-let numericRandomId = generateNumericRandomId(8); // Generiert eine zufällige ID mit 8 Zahlen
+let numericRandomId = generateNumericRandomId(8);
 let numericIdAsNumber = parseInt(numericRandomId, 10);
 
-
-
-// Neue AddTask funktion für das board -> muss noch etwas bearbeitet werden
 async function postTask(event) {
   event.preventDefault();
   requiredCheck();
-  
   if (!inputCheck()) {
     return;
   }
-
   let taskPrioImageUrl = '';
   if (currentPriority === 'medium') {
     taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
@@ -94,12 +81,10 @@ async function postTask(event) {
   if (currentPriority === 'urgent') {
     taskPrioImageUrl = './img/urgent-prio-icon-inactive.png';
   }
-  
   let taskMoreContacts = `+${assignedPersons.length - 6}`;
   if (assignedPersons.length < 7) {
     taskMoreContacts = '';
   }
-
   let prio = currentPriority;
   let extractedData = {
     id: numericIdAsNumber,
@@ -122,13 +107,6 @@ async function postTask(event) {
   await postTaskConfirmation();
   await postData("/tasks", extractedData);
 }
-
-
-
-
-
-
-
 
 async function addNewContact() {
   let extractedData = {
