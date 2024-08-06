@@ -49,7 +49,7 @@ function arrayDistributor() {
 async function postData(path = "", data) {
   let response = await fetch(BASE_URL + path + ".json", {
     method: "POST",
-    headers: {
+    header: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
@@ -67,7 +67,7 @@ async function postData(path = "", data) {
 async function patchData(path = "", data) {
   let response = await fetch(BASE_URL + path + ".json", {
       method: "PATCH",
-      headers: {
+      header: {
           "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
@@ -161,5 +161,5 @@ async function addNewContact() {
     phone: getValue("contactNewPhone"),
   };
 
-  await patchData("", extractedData);
+  await patchData(path = "", extractedData);
 }
