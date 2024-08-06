@@ -4,6 +4,7 @@
  */
 const BASE_URL = "https://join-248-default-rtdb.europe-west1.firebasedatabase.app/";
 
+let currentPriorityAlt = '';
 let currentPriority = "";
 let currentUser = [];
 let firebaseData = [];
@@ -115,12 +116,15 @@ async function postTask(event) {
   let taskPrioImageUrl = '';
   if (currentPriority === 'medium') {
     taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
+    currentPriorityAlt = "Medium"
   }
   if (currentPriority === 'low') {
     taskPrioImageUrl = './img/low-prio-icon-inactive.png';
+    currentPriorityAlt = "Low"
   }
   if (currentPriority === 'urgent') {
     taskPrioImageUrl = './img/urgent-prio-icon-inactive.png';
+    currentPriorityAlt = "Urgent"
   }
   let taskMoreContacts = `+${assignedPersons.length - 6}`;
   if (assignedPersons.length < 7) {
@@ -134,13 +138,13 @@ async function postTask(event) {
     taskContactsMore: `${taskMoreContacts}`,
     taskDate: getValue('date'),
     taskDescription: getValue('description'),
-    taskPrioAlt: prio,
+    taskPrioAlt: currentPriorityAlt,
     taskPrioImage: taskPrioImageUrl,
     taskStatus: 'toDo',
     taskSubtaskAmount: `${subtasksAt.length}`,
     taskSubtasks: subtasksAt,
     taskSubtasksDone: '',
-    taskSubtasksSelected: '',
+    taskSubtasksSelected: ['placeholder'],
     taskTitle: getValue('title'),
     taskType: getValue('category'),
   };
