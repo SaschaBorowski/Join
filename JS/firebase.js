@@ -144,7 +144,6 @@ async function postTask(event) {
     taskTitle: getValue('title'),
     taskType: getValue('category'),
   };
-
   await postTaskConfirmation();
   await postData("/tasks", extractedData);
 }
@@ -160,6 +159,5 @@ async function addNewContact() {
     email: getValue("contactNewMail"),
     phone: getValue("contactNewPhone"),
   };
-
   await patchData(path = "", extractedData);
 }
