@@ -102,8 +102,8 @@ let numericRandomId = generateNumericRandomId(8);
 let numericIdAsNumber = parseInt(numericRandomId, 10);
 
 /**
- * Posts a new task to Firebase Database.
- * @async
+ * Event handler to post a new task.
+ * 
  * @param {Event} event - The event object.
  * @returns {Promise<void>}
  */
@@ -111,45 +111,69 @@ async function postTask(event) {
   event.preventDefault();
   requiredCheck();
   if (!inputCheck()) {
-    return;
+      return;
   }
-  let taskPrioImageUrl = '';
-  if (currentPriority === 'medium') {
-    taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
-    currentPriorityAlt = "Medium"
-  }
-  if (currentPriority === 'low') {
-    taskPrioImageUrl = './img/low-prio-icon-inactive.png';
-    currentPriorityAlt = "Low"
-  }
-  if (currentPriority === 'urgent') {
-    taskPrioImageUrl = './img/urgent-prio-icon-inactive.png';
-    currentPriorityAlt = "Urgent"
-  }
-  let taskMoreContacts = `+${assignedPersons.length - 6}`;
-  if (assignedPersons.length < 7) {
-    taskMoreContacts = '';
-  }
-  let prio = currentPriority;
-  let extractedData = {
-    id: numericIdAsNumber,
-    taskBar: 0,
-    taskContacts: assignedPersons,
-    taskContactsMore: `${taskMoreContacts}`,
-    taskDate: getValue('date'),
-    taskDescription: getValue('description'),
-    taskPrioAlt: currentPriorityAlt,
-    taskPrioImage: taskPrioImageUrl,
-    taskStatus: 'toDo',
-    taskSubtaskAmount: `${subtasksAt.length}`,
-    taskSubtasks: subtasksAt,
-    taskSubtasksDone: '',
-    taskSubtasksSelected: ['placeholder'],
-    taskTitle: getValue('title'),
-    taskType: getValue('category'),
-  };
+  const taskPrioImageUrl = getPriorityImageUrl();
+  const taskMoreContacts = getTaskMoreContacts();
+  const extractedData = constructTaskData(taskPrioImageUrl, taskMoreContacts);
   await postTaskConfirmation();
   await postData("/tasks", extractedData);
+}
+
+/**
+* Get the URL of the priority image based on the current priority.
+* 
+* @returns {string} The URL of the priority image.
+*/
+function getPriorityImageUrl() {
+  let taskPrioImageUrl = '';
+  if (currentPriority === 'medium') {
+      taskPrioImageUrl = './img/medium-prio-icon-inactive.png';
+      currentPriorityAlt = "Medium";
+  } else if (currentPriority === 'low') {
+      taskPrioImageUrl = './img/low-prio-icon-inactive.png';
+      currentPriorityAlt = "Low";
+  } else if (currentPriority === 'urgent') {
+      taskPrioImageUrl = './img/urgent-prio-icon-inactive.png';
+      currentPriorityAlt = "Urgent";
+  }
+  return taskPrioImageUrl;
+}
+
+/**
+* Get the string representing the number of additional contacts if there are more than six assigned persons.
+* 
+* @returns {string} The string representing the number of additional contacts.
+*/
+function getTaskMoreContacts() {
+  return assignedPersons.length >= 7 ? `+${assignedPersons.length - 6}` : '';
+}
+
+/**
+* Construct the task data object from the input values.
+* 
+* @param {string} taskPrioImageUrl - The URL of the priority image.
+* @param {string} taskMoreContacts - The string representing the number of additional contacts.
+* @returns {Object} The constructed task data object.
+*/
+function constructTaskData(taskPrioImageUrl, taskMoreContacts) {
+  return {
+      id: numericIdAsNumber,
+      taskBar: 0,
+      taskContacts: assignedPersons,
+      taskContactsMore: `${taskMoreContacts}`,
+      taskDate: getValue('date'),
+      taskDescription: getValue('description'),
+      taskPrioAlt: currentPriorityAlt,
+      taskPrioImage: taskPrioImageUrl,
+      taskStatus: 'toDo',
+      taskSubtaskAmount: `${subtasksAt.length}`,
+      taskSubtasks: subtasksAt,
+      taskSubtasksDone: '',
+      taskSubtasksSelected: ['placeholder'],
+      taskTitle: getValue('title'),
+      taskType: getValue('category'),
+  };
 }
 
 /**
