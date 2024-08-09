@@ -418,7 +418,7 @@ select {
 .small-input-vertical-vector {
     border: 1px solid #D1D1D1;
     width: 0px;
-    height: 24px;
+    height: 20px;
     margin: 0 0px;
 }
 
@@ -579,7 +579,7 @@ select {
 }
 
 .subTaskList {
-    width: 473px;
+    width: 442px;
     height: 124px;
     overflow-y: auto;
 }

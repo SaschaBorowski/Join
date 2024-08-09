@@ -348,6 +348,10 @@
     .edit-subtask-input{
         width: 140px;
     }
+
+    .subTaskList {
+        width: 396px !important;
+    }
 }
 
 @media(max-width:500px) {
@@ -522,7 +526,7 @@
     }
 
     .subTaskList {
-        width: 368px !important;
+        width: 300px !important;
     }
 
     .rotating:hover {
@@ -535,9 +539,6 @@
         left: 25px;
     }
 
-    .subTaskList {
-        width: 324px !important;
-    }
 
     .dropdown-list {
         left: 0;
@@ -604,7 +605,7 @@
     }
 
     .subTaskList {
-        width: 368px !important;
+        width: 280px !important;
     }
 
     .rotating:hover {
