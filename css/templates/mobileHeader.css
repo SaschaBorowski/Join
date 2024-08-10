@@ -17,6 +17,7 @@
 
 .hidden-responsive {
     right: 6px;
+    /* transform: translateX(0); */
 }
 
 .a-link {

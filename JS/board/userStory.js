@@ -74,8 +74,6 @@ function processTasksData(id, tasksData) {
  */
 function createTaskHtml(taskData) {
     const formattedSubtasks = formatSubtasks(taskData.taskSubtasks, taskData.taskSubtasksSelected, taskData.id);
-    console.log(formattedSubtasks);
-    
     const formattedContactsFullName = formatContactsFullName(taskData.taskContacts);
     const formattedContacts = formatContacts(taskData.taskContacts);
     return userStoryHtmlTemplate(taskData, formattedContacts, formattedContactsFullName, formattedSubtasks);
