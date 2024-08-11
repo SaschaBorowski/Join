@@ -229,7 +229,7 @@ function guardCheckMobile() {
         sidebarContainer.style.display = 'none';
       }
     }else{
-      sidebarContainer.style.display = 'flex';
+      return;
     }
   }
 }
